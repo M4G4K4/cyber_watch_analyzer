@@ -1,0 +1,11 @@
+{
+  "name": "cyber_watch_analyzer",
+  "version": "0.0.1",
+  "description": "cyber watch worker to analyze websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Dias",
+  "license": "ISC"
+}
