@@ -1,5 +1,4 @@
 // https://github.com/harryhorton/node-nmap
-
 // var nmapscan = new nmap.NmapScan('127.0.0.1 google.com', '-sn');
 
 const nmap = require('node-nmap');
@@ -10,6 +9,8 @@ let nmapScan = new nmap.NmapScan('192.168.1.82', '');
 // See nmap3.js
 //var nmapscan = new nmap.NmapScan('127.0.0.1 google.com', '-sn');
 // var nmapscan = new nmap.NmapScan('127.0.0.1 --script vulners');
+// var nmapscan = new nmap.NmapScan('127.0.0.1 --script vulners', '-sV');
+// var nmapscan = new nmap.NmapScan('127.0.0.1 -sV --script vulners');
 
 
 // --script vuln
@@ -21,6 +22,7 @@ let nmapScan = new nmap.NmapScan('192.168.1.82', '');
 // --script=vulscan/vulscan.nse
 // --script vulners
         // https://github.com/vulnersCom/nmap-vulners
+        // https://nmap.org/nsedoc/scripts/vulners.html
 // --script nmap-vulners
         // --script nmap-vulners,vulscan
 
