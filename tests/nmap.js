@@ -3,8 +3,7 @@
 
 const nmap = require('node-nmap');
 nmap.nmapLocation = 'nmap';
-let quickscan = new nmap.OsAndPortScan ('192.168.1.82'); // 192.168.1.82
-let nmapScan = new nmap.NmapScan('192.168.1.82', '');
+let quickscan = new nmap.OsAndPortScan ('192.168.1.88', '-O');
 
 // See nmap3.js
 //var nmapscan = new nmap.NmapScan('127.0.0.1 google.com', '-sn');
@@ -28,6 +27,7 @@ let nmapScan = new nmap.NmapScan('192.168.1.82', '');
 
 quickscan.on('complete', function(data){
     console.log(data);
+    console.log(data[0].openPorts);
 });
 
 quickscan.on('error', function(error){
