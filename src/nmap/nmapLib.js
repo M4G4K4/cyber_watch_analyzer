@@ -1,7 +1,6 @@
 const execSync = require('child_process').execSync;
 const xml2js = require('xml2js');
 const util = require('util');
-const lib = require('./nmapLib');
 const mapper = require('./nmapMapper');
 
 const allowedScript = [
@@ -17,8 +16,8 @@ async function scan(ip, useScript, script){
 }
 
 async function scanMapped(ip, useScript, script){
-    const code = execSync(constructComand(ip, useScript, script));
-    return mapper.mapNmapResult(await xml2js.parseStringPromise(code));
+    const nmapResult = await execSync(constructComand(ip, useScript, script));
+    return mapper.mapNmapResult(await xml2js.parseStringPromise(nmapResult));
 }
 
 function constructComand(ip, useScript, script){
@@ -37,4 +36,5 @@ function constructComand(ip, useScript, script){
 
 module.exports = {
     scan,
+    scanMapped
 }
