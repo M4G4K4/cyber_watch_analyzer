@@ -26,6 +26,8 @@ function constructComand(ip, useScript, script){
     if(useScript === true){
         if(allowedScript.includes(script)){
             comand += '--script ' + script + ' ';
+        }else{
+            throw Error("Wrong script");
         }
     }
 

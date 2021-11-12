@@ -22,7 +22,6 @@ function mapSslEnumCiphers(){
 function mapJustPorts(result){
     let mapped = {};
 
-    // success: nmaprun.runstats[0].finished[0].$.exit // == 'success' : true
     let scanInfo = {
         scanner: result.nmaprun.$.scanner,
         scanner: result.nmaprun.$.scanner,
