@@ -11,29 +11,29 @@ const allowedScript = [
 xml2js.parseStringPromise = util.promisify(xml2js.parseString);
 
 async function scan(ip, useScript, script){
-    const code = execSync(constructComand(ip, useScript, script));
+    const code = execSync(constructCommand(ip, useScript, script));
     return await xml2js.parseStringPromise(code);
 }
 
 async function scanMapped(ip, useScript, script){
-    const nmapResult = await execSync(constructComand(ip, useScript, script));
+    const nmapResult = await execSync(constructCommand(ip, useScript, script));
     return mapper.mapNmapResult(await xml2js.parseStringPromise(nmapResult));
 }
 
-function constructComand(ip, useScript, script){
-    let comand = 'nmap ';
+function constructCommand(ip, useScript, script){
+    let command = 'nmap ';
 
     if(useScript === true){
         if(allowedScript.includes(script)){
-            comand += '--script ' + script + ' ';
+            command += '--script ' + script + ' ';
         }else{
             throw Error("Wrong script");
         }
     }
 
-    comand += '-oX - ';
-    comand += ip;
-    return comand;
+    command += '-oX - ';
+    command += ip;
+    return command;
 }
 
 module.exports = {

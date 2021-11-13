@@ -24,16 +24,13 @@ function mapJustPorts(result){
 
     let scanInfo = {
         scanner: result.nmaprun.$.scanner,
-        scanner: result.nmaprun.$.scanner,
-        comand: result.nmaprun.$.args,
+        command: result.nmaprun.$.args,
         version: result.nmaprun.$.version,
         xmlVersion: result.nmaprun.$.xmloutputversion,
         protocol: result.nmaprun.scaninfo[0].$.protocol,
-        success: result.nmaprun.runstats[0].finished[0].$.exit == 'success' ? 
-                                                    true : 
-                                                    false
+        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success'
     }
-    
+
     let host = {
         status: result.nmaprun.host[0].status[0].$.state,
         address: result.nmaprun.host[0].address[0].$.addr,
@@ -51,26 +48,25 @@ function mapJustPorts(result){
 
     let array = result.nmaprun.host[0].ports[0].port
     for(let i = 0; i < array.length; i++){
-        var data = {
+        const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
             state: array[i].state[0].$.state,
             service: array[i].service[0].$.name
-        }
+        };
 
         ports.open.push(data);
     }
 
-    
     mapped.host = host;
     mapped.scanInfo = scanInfo
     mapped.ports = ports;
-    
+
     return mapped;
 }
 
 function mapVulnerability() {
-    
+
 }
 
 module.exports = {
