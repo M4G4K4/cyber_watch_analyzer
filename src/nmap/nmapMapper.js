@@ -15,10 +15,6 @@ function mapNmapResult(result, useScript, script){
 }
 
 
-function mapSslEnumCiphers(){
-
-}
-
 function mapJustPorts(result){
     let mapped = {};
 
@@ -65,7 +61,42 @@ function mapJustPorts(result){
     return mapped;
 }
 
+function mapPortsWithServiceVersion(result){
+    let mapped = {};
+
+    let scanInfo = {
+        scanner: result.nmaprun.$.scanner,
+        command: result.nmaprun.$.args,
+        version: result.nmaprun.$.version,
+        xmlVersion: result.nmaprun.$.xmloutputversion,
+        protocol: result.nmaprun.scaninfo[0].$.protocol,
+        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success'
+    }
+
+
+    return mapped;
+}
+
+function mapSslEnumCiphers(){
+    let mapped = {};
+
+    let scanInfo = {
+        scanner: result.nmaprun.$.scanner,
+        command: result.nmaprun.$.args,
+        version: result.nmaprun.$.version,
+        xmlVersion: result.nmaprun.$.xmloutputversion,
+        protocol: result.nmaprun.scaninfo[0].$.protocol,
+        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success'
+    }
+
+
+
+
+    mapped.scanInfo = scanInfo;
+}
+
 function mapVulnerability() {
+    let mapped = {};
 
 }
 
