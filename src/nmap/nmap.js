@@ -32,3 +32,9 @@ async function scanVulnerabilitiies(ip){
     // return result;
     console.log(JSON.stringify(result));
 }
+
+async function scanVulnerabilitiiesWithServiceVersion(ip){
+    const result = await nmap.scan(ip, true, true, false, 'vuln');
+    // return result;
+    console.log(JSON.stringify(result));
+}

@@ -1,0 +1,192 @@
+{
+    "script": [
+        {
+          "$": {
+            "id": "sslv2-drown",
+            "output": "ERROR: Script execution failed (use -d to debug)"
+          }
+        },
+        {
+          "$": {
+            "id": "ssl-dh-params",
+            "output": "\n  VULNERABLE:\n  Anonymous Diffie-Hellman Key Exchange MitM Vulnerability\n    State: VULNERABLE\n      Transport Layer Security (TLS) services that use anonymous\n      Diffie-Hellman key exchange only provide protection against passive\n      eavesdropping, and are vulnerable to active man-in-the-middle attacks\n      which could completely compromise the confidentiality and integrity\n      of any data exchanged over the resulting session.\n    Check results:\n      ANONYMOUS DH GROUP 1\n            Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5\n            Modulus Type: Safe prime\n            Modulus Source: Unknown/Custom-generated\n            Modulus Length: 512\n            Generator Length: 8\n            Public Key Length: 512\n    References:\n      https://www.ietf.org/rfc/rfc2246.txt\n  \n  Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)\n    State: VULNERABLE\n    IDs:  CVE:CVE-2015-4000  BID:74733\n      The Transport Layer Security (TLS) protocol contains a flaw that is\n      triggered when handling Diffie-Hellman key exchanges defined with\n      the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker\n      to downgrade the security of a TLS session to 512-bit export-grade\n      cryptography, which is significantly weaker, allowing the attacker\n      to more easily break the encryption and monitor or tamper with\n      the encrypted stream.\n    Disclosure date: 2015-5-19\n    Check results:\n      EXPORT-GRADE DH GROUP 1\n            Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA\n            Modulus Type: Safe prime\n            Modulus Source: Unknown/Custom-generated\n            Modulus Length: 512\n            Generator Length: 8\n            Public Key Length: 512\n    References:\n      https://www.securityfocus.com/bid/74733\n      https://weakdh.org\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000\n  \n  Diffie-Hellman Key Exchange Insufficient Group Strength\n    State: VULNERABLE\n      Transport Layer Security (TLS) services that use Diffie-Hellman groups\n      of insufficient strength, especially those using one of a few commonly\n      shared groups, may be susceptible to passive eavesdropping attacks.\n    Check results:\n      WEAK DH GROUP 1\n            Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA\n            Modulus Type: Safe prime\n            Modulus Source: postfix builtin\n            Modulus Length: 1024\n            Generator Length: 8\n            Public Key Length: 1024\n    References:\n      https://weakdh.org\n"
+          },
+          "table": [
+            {
+              "$": { "key": "NMAP-17" },
+              "elem": [
+                {
+                  "_": "Anonymous Diffie-Hellman Key Exchange MitM Vulnerability",
+                  "$": { "key": "title" }
+                },
+                { 
+                  "_": "VULNERABLE", 
+                  "$": { 
+                    "key": "state" 
+                    } 
+                  }
+              ],
+              "table": [
+                {
+                  "$": { "key": "description" },
+                  "elem": [
+                    "Transport Layer Security (TLS) services that use anonymous\nDiffie-Hellman key exchange only provide protection against passive\neavesdropping, and are vulnerable to active man-in-the-middle attacks\nwhich could completely compromise the confidentiality and integrity\nof any data exchanged over the resulting session."
+                  ]
+                },
+                {
+                  "$": { "key": "check_results" },
+                  "elem": [
+                    "ANONYMOUS DH GROUP 1\n      Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5\n      Modulus Type: Safe prime\n      Modulus Source: Unknown/Custom-generated\n      Modulus Length: 512\n      Generator Length: 8\n      Public Key Length: 512"
+                  ]
+                },
+                {
+                  "$": { "key": "refs" },
+                  "elem": ["https://www.ietf.org/rfc/rfc2246.txt"]
+                }
+              ]
+            },
+            {
+              "$": { "key": "CVE-2015-4000" },
+              "elem": [
+                {
+                  "_": "Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)",
+                  "$": { "key": "title" }
+                },
+                { "_": "VULNERABLE", "$": { "key": "state" } },
+                { "_": "2015-5-19", "$": { "key": "disclosure" } }
+              ],
+              "table": [
+                {
+                  "$": { "key": "ids" },
+                  "elem": ["CVE:CVE-2015-4000", "BID:74733"]
+                },
+                {
+                  "$": { "key": "description" },
+                  "elem": [
+                    "The Transport Layer Security (TLS) protocol contains a flaw that is\ntriggered when handling Diffie-Hellman key exchanges defined with\nthe DHE_EXPORT cipher. This may allow a man-in-the-middle attacker\nto downgrade the security of a TLS session to 512-bit export-grade\ncryptography, which is significantly weaker, allowing the attacker\nto more easily break the encryption and monitor or tamper with\nthe encrypted stream."
+                  ]
+                },
+                {
+                  "$": { "key": "dates" },
+                  "table": [
+                    {
+                      "$": { "key": "disclosure" },
+                      "elem": [
+                        { "_": "5", "$": { "key": "month" } },
+                        { "_": "19", "$": { "key": "day" } },
+                        { "_": "2015", "$": { "key": "year" } }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$": { "key": "check_results" },
+                  "elem": [
+                    "EXPORT-GRADE DH GROUP 1\n      Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA\n      Modulus Type: Safe prime\n      Modulus Source: Unknown/Custom-generated\n      Modulus Length: 512\n      Generator Length: 8\n      Public Key Length: 512"
+                  ]
+                },
+                {
+                  "$": { "key": "refs" },
+                  "elem": [
+                    "https://www.securityfocus.com/bid/74733",
+                    "https://weakdh.org",
+                    "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000"
+                  ]
+                }
+              ]
+            },
+            {
+              "$": { "key": "NMAP-18" },
+              "elem": [
+                {
+                  "_": "Diffie-Hellman Key Exchange Insufficient Group Strength",
+                  "$": { "key": "title" }
+                },
+                { "_": "VULNERABLE", "$": { "key": "state" } }
+              ],
+              "table": [
+                {
+                  "$": { "key": "description" },
+                  "elem": [
+                    "Transport Layer Security (TLS) services that use Diffie-Hellman groups\nof insufficient strength, especially those using one of a few commonly\nshared groups, may be susceptible to passive eavesdropping attacks."
+                  ]
+                },
+                {
+                  "$": { "key": "check_results" },
+                  "elem": [
+                    "WEAK DH GROUP 1\n      Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA\n      Modulus Type: Safe prime\n      Modulus Source: postfix builtin\n      Modulus Length: 1024\n      Generator Length: 8\n      Public Key Length: 1024"
+                  ]
+                },
+                {
+                  "$": { "key": "refs" },
+                  "elem": ["https://weakdh.org"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$": {
+            "id": "ssl-poodle",
+            "output": "\n  VULNERABLE:\n  SSL POODLE information leak\n    State: VULNERABLE\n    IDs:  CVE:CVE-2014-3566  BID:70574\n          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other\n          products, uses nondeterministic CBC padding, which makes it easier\n          for man-in-the-middle attackers to obtain cleartext data via a\n          padding-oracle attack, aka the \"POODLE\" issue.\n    Disclosure date: 2014-10-14\n    Check results:\n      TLS_RSA_WITH_AES_128_CBC_SHA\n    References:\n      https://www.imperialviolet.org/2014/10/14/poodle.html\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566\n      https://www.openssl.org/~bodo/ssl-poodle.pdf\n      https://www.securityfocus.com/bid/70574\n"
+          },
+          "table": [
+            {
+              "$": { "key": "CVE-2014-3566" },
+              "elem": [
+                {
+                  "_": "SSL POODLE information leak",
+                  "$": { "key": "title" }
+                },
+                { "_": "VULNERABLE", "$": { "key": "state" } },
+                { "_": "2014-10-14", "$": { "key": "disclosure" } }
+              ],
+              "table": [
+                {
+                  "$": { "key": "ids" },
+                  "elem": ["CVE:CVE-2014-3566", "BID:70574"]
+                },
+                {
+                  "$": { "key": "description" },
+                  "elem": [
+                    "    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other\n    products, uses nondeterministic CBC padding, which makes it easier\n    for man-in-the-middle attackers to obtain cleartext data via a\n    padding-oracle attack, aka the \"POODLE\" issue."
+                  ]
+                },
+                {
+                  "$": { "key": "dates" },
+                  "table": [
+                    {
+                      "$": { "key": "disclosure" },
+                      "elem": [
+                        { "_": "10", "$": { "key": "month" } },
+                        { "_": "14", "$": { "key": "day" } },
+                        { "_": "2014", "$": { "key": "year" } }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$": { "key": "check_results" },
+                  "elem": ["TLS_RSA_WITH_AES_128_CBC_SHA"]
+                },
+                {
+                  "$": { "key": "refs" },
+                  "elem": [
+                    "https://www.imperialviolet.org/2014/10/14/poodle.html",
+                    "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566",
+                    "https://www.openssl.org/~bodo/ssl-poodle.pdf",
+                    "https://www.securityfocus.com/bid/70574"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$": {
+            "id": "smtp-vuln-cve2010-4344",
+            "output": "\n  The SMTP server is not Exim: NOT VULNERABLE\n"
+          }
+        }
+      ]
+}
