@@ -3,42 +3,43 @@ const xml2js = require('xml2js');
 const util = require('util');
 const mapper = require('./nmapMapper');
 
+xml2js.parseStringPromise = util.promisify(xml2js.parseString);
+
 const allowedScript = [
     'ssl-enum-ciphers',
     'vuln',
 ];
 
 
-xml2js.parseStringPromise = util.promisify(xml2js.parseString);
-
-
-async function scan(ip, useScript, version, script){
+async function scan(ip, useScript, serviceVersion, osVersion, script){
     try{
-        const comand = constructCommand(ip, useScript, version, script);
-        const nmapResult = execSync(comand);
-        return await xml2js.parseStringPromise(nmapResult);
+        const comand = constructCommand(ip, useScript, serviceVersion, osVersion, script);
+        const scanResult = execSync(comand);
+        return await xml2js.parseStringPromise(scanResult);
     }catch(e){
         console.log(e);
     }
 }
 
-async function scanMapped(ip, useScript, version, script){
+async function scanMapped(ip, useScript, serviceVersion, osVersion, script){
     try{
-        const comand = constructCommand(ip, useScript, version, script);
-        const nmapResult = execSync(comand);
-        return mapper.mapNmapResult(await xml2js.parseStringPromise(nmapResult));
+        const comand = constructCommand(ip, useScript, serviceVersion, osVersion, script);
+        const scanResult = execSync(comand);
+        return mapper.mapNmapResult(await xml2js.parseStringPromise(scanResult), useScript, serviceVersion, osVersion, script);
     }catch(e){
         console.log(e);
     }
 }
 
-function constructCommand(ip, useScript, version, script){
+function constructCommand(ip, useScript, serviceVersion, osVersion,script){
     let command = 'nmap ';
-    let serviceVersion = '-sv ';
-    let outputXML = '-oX - ';
 
-    if(version === true){
-        command += serviceVersion;
+    if(serviceVersion === true){
+        command += '-sV ';
+    }
+
+    if(osVersion === true){
+        command += '-O ';
     }
 
     if(useScript === true){
@@ -49,7 +50,7 @@ function constructCommand(ip, useScript, version, script){
         }
     }
 
-    command += outputXML;
+    command += '-oX - ';
     command += ip;
     return command;
 }

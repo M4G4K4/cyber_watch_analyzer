@@ -9,4 +9,3 @@ rabbit.getInstance()
     })
   })
 */
-
