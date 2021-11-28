@@ -1,0 +1,75 @@
+[
+    {
+      name: 'Apache',
+      cats: [ '22'
+        ],
+      versions: [ '2.4.41'
+        ],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'Apache.svg',
+      website: 'http: //apache.org'
+    },
+    {
+      name: 'Google Analytics',
+      cats: [ '10'
+        ],
+      versions: [],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'Google Analytics.svg',
+      website: 'http: //google.com/analytics'
+    },
+    {
+      name: 'Google Tag Manager',
+      cats: [ '42'
+        ],
+      versions: [],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'Google Tag Manager.png',
+      website: 'http: //www.google.com/tagmanager'
+    },
+    {
+      name: 'Moment.js',
+      cats: [ '12'
+        ],
+      versions: [],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'Moment.js.png',
+      website: 'http: //momentjs.com'
+    },
+    {
+      name: 'Ubuntu',
+      cats: [ '28'
+        ],
+      versions: [],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'Ubuntu.png',
+      website: 'http: //www.ubuntu.com/server'
+    },
+    {
+      name: 'jQuery',
+      cats: [ '12'
+        ],
+      versions: [],
+      confidences: [
+            [Object
+            ]
+        ],
+      icon: 'jQuery.svg',
+      website: 'http: //jquery.com'
+    }
+]
