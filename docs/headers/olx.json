@@ -1,0 +1,26 @@
+{
+   "content-type": "text/html; charset=UTF-8",
+   "transfer-encoding": "chunked",
+   "connection": "close",
+   "date": "Sun, 28 Nov 2021 00:20:18 GMT",
+   "server": "nginx",
+   "set-cookie": [
+      "newrelic_cdn_name=CF; expires=Sun, 28-Nov-2021 00:30:18 GMT; Max-Age=600; path=/; domain=.olx.pt",
+      "PHPSESSID=8g3s6rg7iarqe1pvnrmnl0n8li; expires=Sun, 28-Nov-2021 01:20:18 GMT; Max-Age=3600; path=/; domain=.olx.pt; secure; HttpOnly",
+      "mobile_default=desktop; path=/; domain=.olx.pt; secure",
+      "lister_lifecycle=1638058818; expires=Mon, 28-Nov-2022 00:20:18 GMT; Max-Age=31536000; path=/; domain=.olx.pt"
+   ],
+   "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+   "cache-control": "no-store, no-cache, must-revalidate",
+   "pragma": "no-cache",
+   "content-security-policy": "default-src * \"unsafe-eval\" \"unsafe-inline\" data:; frame-ancestors \"self\" app.optimizely.com apps.facebook.com fonts.googleapis.com; media-src * blob:",
+   "x-xss-protection": "1",
+   "x-content-type-options": "nosniff",
+   "referrer-policy": "unsafe-url",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "vary": "Accept-Encoding",
+   "x-cache": "Miss from cloudfront",
+   "via": "1.1 84e82c8a6f436c18da1182c07f463907.cloudfront.net (CloudFront)",
+   "x-amz-cf-pop": "LIS50-C1",
+   "x-amz-cf-id": "7Zga80w9zzidCU5hvCG9zP_J84BJG_TdSCBYPS8jhfe8dOvlxosC0Q=="
+}

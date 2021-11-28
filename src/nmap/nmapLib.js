@@ -11,41 +11,41 @@ const allowedScript = [
 ];
 
 
-async function scan(ip, useScript, serviceVersion, osVersion, script){
-    try{
+async function scan(ip, useScript, serviceVersion, osVersion, script) {
+    try {
         const comand = constructCommand(ip, useScript, serviceVersion, osVersion, script);
         const scanResult = execSync(comand);
         return await xml2js.parseStringPromise(scanResult);
-    }catch(e){
+    } catch (e) {
         console.log(e);
     }
 }
 
-async function scanMapped(ip, useScript, serviceVersion, osVersion, script){
-    try{
+async function scanMapped(ip, useScript, serviceVersion, osVersion, script) {
+    try {
         const comand = constructCommand(ip, useScript, serviceVersion, osVersion, script);
         const scanResult = execSync(comand);
         return mapper.mapNmapResult(await xml2js.parseStringPromise(scanResult), useScript, serviceVersion, osVersion, script);
-    }catch(e){
+    } catch (e) {
         console.log(e);
     }
 }
 
-function constructCommand(ip, useScript, serviceVersion, osVersion,script){
+function constructCommand(ip, useScript, serviceVersion, osVersion, script) {
     let command = 'nmap ';
 
-    if(serviceVersion === true){
+    if (serviceVersion === true) {
         command += '-sV ';
     }
 
-    if(osVersion === true){
+    if (osVersion === true) {
         command += '-O ';
     }
 
-    if(useScript === true){
-        if(allowedScript.includes(script)){
+    if (useScript === true) {
+        if (allowedScript.includes(script)) {
             command += '--script ' + script + ' ';
-        }else{
+        } else {
             throw Error("Wrong script");
         }
     }

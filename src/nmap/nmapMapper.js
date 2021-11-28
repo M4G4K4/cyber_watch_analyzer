@@ -1,23 +1,24 @@
 
-function mapNmapResult(scanResult, useScript, serviceVersion, osVersion, script){
+function mapNmapResult(scanResult, useScript, serviceVersion, osVersion, script) {
     let data;
-    if(useScript === true){
-        if(script === 'vuln'){
-            if(serviceVersion === true){
+    if (useScript === true) {
+        if (script === 'vuln') {
+            if (serviceVersion === true) {
                 data = mapVulnerabilityWithServiceVersion(scanResult);
-            }else{
+            } else {
                 data = mapVulnerability(scanResult);
 
             }
-        }
-        else if(script === 'ssl-enum-ciphers'){
+        } else if (script === 'ssl-enum-ciphers') {
             data = mapSslEnumCiphers(scanResult);
+        } else {
+            data = mapPorts(scanResult);
         }
-    }else{
-        if(serviceVersion === true){
+    } else {
+        if (serviceVersion === true) {
             data = mapPortsWithServiceVersion(scanResult);
-        }else{
-            data = mapJustPorts(scanResult);
+        } else {
+            data = mapPorts(scanResult);
         }
     }
 
@@ -25,7 +26,7 @@ function mapNmapResult(scanResult, useScript, serviceVersion, osVersion, script)
 }
 
 
-function mapJustPorts(result){
+function mapPorts(result) {
     let mapped = {};
 
     let scanInfo = {
@@ -53,7 +54,7 @@ function mapJustPorts(result){
     }
 
     let array = result.nmaprun.host[0].ports[0].port
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
@@ -71,7 +72,7 @@ function mapJustPorts(result){
     return mapped;
 }
 
-function mapPortsWithServiceVersion(result){
+function mapPortsWithServiceVersion(result) {
     let mapped = {};
 
     let scanInfo = {
@@ -99,7 +100,7 @@ function mapPortsWithServiceVersion(result){
     }
 
     let array = result.nmaprun.host[0].ports[0].port
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
@@ -122,7 +123,7 @@ function mapPortsWithServiceVersion(result){
     return mapped;
 }
 
-function mapSslEnumCiphers(result){
+function mapSslEnumCiphers(result) {
     let mapped = {};
 
     let scanInfo = {
@@ -150,7 +151,7 @@ function mapSslEnumCiphers(result){
     }
 
     let array = result.nmaprun.host[0].ports[0].port
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
@@ -163,14 +164,14 @@ function mapSslEnumCiphers(result){
             hostname: array[i].service[0].$.hostname != undefined ? array[i].service[0].$.hostname : null
         };
 
-        if(array[i].script != undefined){
+        if (array[i].script != undefined) {
             const scriptData = {
                 name: array[i].script[0].$.id,
                 ciphers: []
             }
 
             let arrayScript = array[i].script[0].table;
-            for(let x = 0; x < arrayScript.length, x++){
+            for (let x = 0; x < arrayScript.length; x++) {
                 const ciphersData = {
                     version: arrayScript[x].$.key
                 }
@@ -213,28 +214,31 @@ function mapVulnerability(result) {
     }
 
     let array = result.nmaprun.host[0].ports[0].port
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
             state: array[i].state[0].$.state,
-            vulerability: []
+            vulnerability: []
         };
 
-        if(array[i].script != undefined){
+        if (array[i].script != undefined) {
             let arrayScript = array[i].script;
-            for(let x = 0; x < arrayScript.length; x++){
-                if(arrayScript[x].table != undefined){
+            for (let x = 0; x < arrayScript.length; x++) {
+                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined) {
+                    const table = arrayScript[x].table;
+
                     const vulnData = {
                         name: arrayScript[x].$.id,
+                        key: table[0].$.key,
+                        data: []
                     }
-                    // 1st Table - Main table
-                    const table = arrayScript[x].table;
-                    for(let z = 0; z < table.length; z++){
-                        // vulnData.cenas = 'asdasd';
-                        
+
+                    for (let c = 0; c < table.elem.length; c++) {
+                        vulnData.data.push(table.elem[c]._)
                     }
-                    data.vulerability.push(vulnData);
+
+                    data.vulnerability.push(vulnData);
                 }
             }
 
@@ -278,7 +282,7 @@ function mapVulnerabilityWithServiceVersion(result) {
     }
 
     let array = result.nmaprun.host[0].ports[0].port
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
             protocol: array[i].$.protocol,
@@ -288,10 +292,31 @@ function mapVulnerabilityWithServiceVersion(result) {
             version: array[i].service[0].$.version,
             osType: array[i].service[0].$.ostype,
             extrainfo: array[i].service[0].$.extrainfo != undefined ? array[i].service[0].$.extrainfo : null,
-            hostname: array[i].service[0].$.hostname != undefined ? array[i].service[0].$.hostname : null
+            hostname: array[i].service[0].$.hostname != undefined ? array[i].service[0].$.hostname : null,
+            vulnerability: []
         };
-        
-        // Copy from above
+
+        if (array[i].script != undefined) {
+            let arrayScript = array[i].script;
+            for (let x = 0; x < arrayScript.length; x++) {
+                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined) {
+                    const table = arrayScript[x].table;
+
+                    const vulnData = {
+                        name: arrayScript[x].$.id,
+                        key: table[0].$.key,
+                        data: []
+                    }
+
+                    for (let c = 0; c < table.elem.length; c++) {
+                        vulnData.data.push(table.elem[c]._)
+                    }
+
+                    data.vulnerability.push(vulnData);
+                }
+            }
+
+        }
 
         ports.open.push(data);
     }

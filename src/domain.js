@@ -1,27 +1,19 @@
 const dns = require('dns');
-const geoip = require('geoip-lite');
 
 dnsPromises = dns.promises;
 
-function stripUrl(url){
-    return url.replace("https://", "").replace("/", "");
-}
-
-async function getIpFromDomain(url) {
-    return await dnsPromises.lookup(stripUrl(url));
-}
-
-async function getAddressFromDomain(url){
-    return await dnsPromises.resolve4(stripUrl(url));
-}
-
-function subDomain(url) {
+function isSubDomain(url) {
     url = url.replace(new RegExp(/^\s+/),""); // START
     url = url.replace(new RegExp(/\s+$/),""); // END
+
     url = url.replace(new RegExp(/\\/g),"/");
+
     url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
+
     url = url.replace(new RegExp(/^www\./i),"");
+
     url = url.replace(new RegExp(/\/(.*)/),"");
+
     if (url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))) {
         url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
 
@@ -29,22 +21,37 @@ function subDomain(url) {
         url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
     }
 
-    return (url.match(new RegExp(/\./g))) ? true : false;
+    return !!(url.match(new RegExp(/\./g)));
 }
 
 async function reverseLookup(ip) {
-    return await dnsPromises.reverse(ip);
+    var domains = await dnsPromises.reverse(ip);
+    console.log(domains);
+    return domains[0];
 }
 
-function getInfoFromIp(ip){
-    return geoip.lookup(ip);
+function domainInfo(link){
+    let url = new URL(link);
+    const result =  {
+        hostname: url.hostname,
+        pathname: url.pathname,
+        protocol: url.protocol.replace(':',''),
+        query_parameters: url.search
+    }
+
+    console.log(result);
+    return result;
+}
+
+async function resolveIpFromDomain(domain){
+    const result = await dnsPromises.resolve(domain);
+    console.log(result);
+    return result;
 }
 
 module.exports = {
-    getInfoFromIp,
-    getIpFromDomain,
-    subDomain,
+    domainInfo,
+    isSubDomain,
     reverseLookup,
-    getAddressFromDomain
+    resolveIpFromDomain
 }
-

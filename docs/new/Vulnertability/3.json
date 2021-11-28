@@ -37,8 +37,13 @@
                   "_": "Slowloris DOS attack",
                   "$": { "key": "title" }
                 },
-                { "_": "LIKELY VULNERABLE", "$": { "key": "state" } },
-                { "_": "2009-09-17", "$": { "key": "disclosure" } }
+                { 
+                  "_": "LIKELY VULNERABLE", 
+                  "$": { "key": "state" } 
+                },
+                { "_": "2009-09-17", 
+                  "$": { "key": "disclosure" } 
+                }
               ],
               "table": [
                 {
