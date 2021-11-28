@@ -1,5 +1,5 @@
 var wb = require('whatsbehind');
-var url = "https://www.ipvc.pt/";// A WordPress site wappalyzer cannot detect
+var url = "https://www.ipvc.pt/";
 wb.scan(url, function (err, data) {
     // this function is called multiple times until data.status is "complete"
  
@@ -10,7 +10,7 @@ wb.scan(url, function (err, data) {
  
     if (data.status == "complete") {
         console.log("Scan completed successfully");
-        console.log(data.detected);
+        console.log(JSON.stringify(data.detected));
     } else {
         console.log("Progress : " + data.progress + "% (" + data.progressDescription + ")");
     }

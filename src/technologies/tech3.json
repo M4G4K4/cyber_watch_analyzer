@@ -1,75 +1,94 @@
 [
     {
-      name: 'Apache',
-      cats: [ '22'
+        "name": "Apache",
+        "cats": [
+            "22"
         ],
-      versions: [ '2.4.41'
+        "versions": [
+            "2.4.41"
         ],
-      confidences: [
-            [Object
-            ]
+        "confidences": [
+            {
+                "type": "headers",
+                "value": "Server /(?:Apache(?:$|\\/([\\d.]+)|[^/-])|(?:^|\b)HTTPD)/i"
+            }
         ],
-      icon: 'Apache.svg',
-      website: 'http: //apache.org'
+        "icon": "Apache.svg",
+        "website": "http://apache.org"
     },
     {
-      name: 'Google Analytics',
-      cats: [ '10'
+        "name": "Google Analytics",
+        "cats": [
+            "10"
         ],
-      versions: [],
-      confidences: [
-            [Object
-            ]
+        "versions": [],
+        "confidences": [
+            {
+                "type": "env",
+                "value": "/^gaGlobal$/i"
+            }
         ],
-      icon: 'Google Analytics.svg',
-      website: 'http: //google.com/analytics'
+        "icon": "Google Analytics.svg",
+        "website": "http://google.com/analytics"
     },
     {
-      name: 'Google Tag Manager',
-      cats: [ '42'
+        "name": "Google Tag Manager",
+        "cats": [
+            "42"
         ],
-      versions: [],
-      confidences: [
-            [Object
-            ]
+        "versions": [],
+        "confidences": [
+            {
+                "type": "env",
+                "value": "/^google_tag_manager$/i"
+            }
         ],
-      icon: 'Google Tag Manager.png',
-      website: 'http: //www.google.com/tagmanager'
+        "icon": "Google Tag Manager.png",
+        "website": "http://www.google.com/tagmanager"
     },
     {
-      name: 'Moment.js',
-      cats: [ '12'
+        "name": "Moment.js",
+        "cats": [
+            "12"
         ],
-      versions: [],
-      confidences: [
-            [Object
-            ]
+        "versions": [],
+        "confidences": [
+            {
+                "type": "env",
+                "value": "/^moment$/i"
+            }
         ],
-      icon: 'Moment.js.png',
-      website: 'http: //momentjs.com'
+        "icon": "Moment.js.png",
+        "website": "http://momentjs.com"
     },
     {
-      name: 'Ubuntu',
-      cats: [ '28'
+        "name": "Ubuntu",
+        "cats": [
+            "28"
         ],
-      versions: [],
-      confidences: [
-            [Object
-            ]
+        "versions": [],
+        "confidences": [
+            {
+                "type": "headers",
+                "value": "Server /Ubuntu/i"
+            }
         ],
-      icon: 'Ubuntu.png',
-      website: 'http: //www.ubuntu.com/server'
+        "icon": "Ubuntu.png",
+        "website": "http://www.ubuntu.com/server"
     },
     {
-      name: 'jQuery',
-      cats: [ '12'
+        "name": "jQuery",
+        "cats": [
+            "12"
         ],
-      versions: [],
-      confidences: [
-            [Object
-            ]
+        "versions": [],
+        "confidences": [
+            {
+                "type": "env",
+                "value": "/^jQuery$/i"
+            }
         ],
-      icon: 'jQuery.svg',
-      website: 'http: //jquery.com'
+        "icon": "jQuery.svg",
+        "website": "http://jquery.com"
     }
 ]
