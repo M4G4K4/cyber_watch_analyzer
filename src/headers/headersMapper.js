@@ -24,25 +24,26 @@ const secure_headers = [
 
 function mapHeaders(headers) {
     let data = {
-        num_deprecated_headers: 4,
-        num_secure_headers: 11,
-        deprecated_present: [],
+        deprecated_headers_present: [],
+        deprecated_headers_notPresent: [],
         secure_headers_present: [],
         secure_headers_notPresent: []
     };
 
-    for(let i = 0; i < deprecated_headers.length; i++){
-        if(headers[deprecated_headers[i]] != undefined){
-            data.deprecated_present.push(deprecated_headers[i]);
-        }
+    for (let i = 0; i < deprecated_headers.length; i++) {
+        if(headers[deprecated_headers[i].toLowerCase()] != undefined){
+            data.deprecated_headers_present.push(deprecated_headers[i].toLowerCase());
+        }else{
+            data.deprecated_headers_notPresent.push(deprecated_headers[i].toLowerCase());
+        }      
     }
 
-    for(let x = 0; x < secure_headers.length; x++){
-        if(headers[secure_headers[x]] != undefined){
-            data.secure_headers_present.push(secure_headers[x]);
+        for (let i = 0; i < secure_headers.length; i++) {
+        if(headers[secure_headers[i].toLowerCase()] != undefined){
+            data.secure_headers_present.push(secure_headers[i].toLowerCase());
         }else{
-            data.secure_headers_notPresent.push(secure_headers[x]);
-        }
+            data.secure_headers_notPresent.push(secure_headers[i].toLowerCase());
+        }      
     }
     
     return data;

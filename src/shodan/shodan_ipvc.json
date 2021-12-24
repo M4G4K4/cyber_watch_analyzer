@@ -1,0 +1,366 @@
+{
+  "city": "Viana do Castelo",
+  "region_code": "16",
+  "os": null,
+  "tags": ["vpn"],
+  "ip": 1042084145,
+  "isp": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+  "area_code": null,
+  "longitude": -8.83287,
+  "last_update": "2021-12-22T13:55:57.448799",
+  "ports": [80, 443, 500, 1723],
+  "latitude": 41.69323,
+  "hostnames": [],
+  "postal_code": null,
+  "country_code": "PT",
+  "country_name": "Portugal",
+  "domains": [],
+  "org": "Instituto Politecnico de Viana do Castelo",
+  "data": [
+    {
+      "ip": 1042084145,
+      "hash": -2085311993,
+      "port": 80,
+      "transport": "tcp",
+      "version": "2.4.41",
+      "location": {
+        "city": "Viana do Castelo",
+        "region_code": "16",
+        "area_code": null,
+        "longitude": -8.83287,
+        "country_name": "Portugal",
+        "postal_code": null,
+        "country_code": "PT",
+        "latitude": 41.69323
+      },
+      "product": "Apache httpd",
+      "http": {
+        "status": 200,
+        "robots_hash": null,
+        "redirects": [],
+        "securitytxt": null,
+        "title": "Apache2 Ubuntu Default Page: It works",
+        "sitemap_hash": null,
+        "robots": null,
+        "server": "Apache/2.4.41 (Ubuntu)",
+        "host": "62.28.241.49",
+        "html": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n  <!--\n    Modified from the Debian original for Ubuntu\n    Last updated: 2016-11-16\n    See: https://launchpad.net/bugs/1288690\n  -->\n  <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n    <title>Apache2 Ubuntu Default Page: It works</title>\n    <style type=\"text/css\" media=\"screen\">\n  * {\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n  }\n\n  body, html {\n    padding: 3px 3px 3px 3px;\n\n    background-color: #D8DBE2;\n\n    font-family: Verdana, sans-serif;\n    font-size: 11pt;\n    text-align: center;\n  }\n\n  div.main_page {\n    position: relative;\n    display: table;\n\n    width: 800px;\n\n    margin-bottom: 3px;\n    margin-left: auto;\n    margin-right: auto;\n    padding: 0px 0px 0px 0px;\n\n    border-width: 2px;\n    border-color: #212738;\n    border-style: solid;\n\n    background-color: #FFFFFF;\n\n    text-align: center;\n  }\n\n  div.page_header {\n    height: 99px;\n    width: 100%;\n\n    background-color: #F5F6F7;\n  }\n\n  div.page_header span {\n    margin: 15px 0px 0px 50px;\n\n    font-size: 180%;\n    font-weight: bold;\n  }\n\n  div.page_header img {\n    margin: 3px 0px 0px 40px;\n\n    border: 0px 0px 0px;\n  }\n\n  div.table_of_contents {\n    clear: left;\n\n    min-width: 200px;\n\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.table_of_contents_item {\n    clear: left;\n\n    width: 100%;\n\n    margin: 4px 0px 0px 0px;\n\n    background-color: #FFFFFF;\n\n    color: #000000;\n    text-align: left;\n  }\n\n  div.table_of_contents_item a {\n    margin: 6px 0px 0px 6px;\n  }\n\n  div.content_section {\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.content_section_text {\n    padding: 4px 8px 4px 8px;\n\n    color: #000000;\n    font-size: 100%;\n  }\n\n  div.content_section_text pre {\n    margin: 8px 0px 8px 0px;\n    padding: 8px 8px 8px 8px;\n\n    border-width: 1px;\n    border-style: dotted;\n    border-color: #000000;\n\n    background-color: #F5F6F7;\n\n    font-style: italic;\n  }\n\n  div.content_section_text p {\n    margin-bottom: 6px;\n  }\n\n  div.content_section_text ul, div.content_section_text li {\n    padding: 4px 8px 4px 16px;\n  }\n\n  div.section_header {\n    padding: 3px 6px 3px 6px;\n\n    background-color: #8E9CB2;\n\n    color: #FFFFFF;\n    font-weight: bold;\n    font-size: 112%;\n    text-align: center;\n  }\n\n  div.section_header_red {\n    background-color: #CD214F;\n  }\n\n  div.section_header_grey {\n    background-color: #9F9386;\n  }\n\n  .floating_element {\n    position: relative;\n    float: left;\n  }\n\n  div.table_of_contents_item a,\n  div.content_section_text a {\n    text-decoration: none;\n    font-weight: bold;\n  }\n\n  div.table_of_contents_item a:link,\n  div.table_of_contents_item a:visited,\n  div.table_of_contents_item a:active {\n    color: #000000;\n  }\n\n  div.table_of_contents_item a:hover {\n    background-color: #000000;\n\n    color: #FFFFFF;\n  }\n\n  div.content_section_text a:link,\n  div.content_section_text a:visited,\n   div.content_section_text a:active {\n    background-color: #DCDFE6;\n\n    color: #000000;\n  }\n\n  div.content_section_text a:hover {\n    background-color: #000000;\n\n    color: #DCDFE6;\n  }\n\n  div.validator {\n  }\n    </style>\n  </head>\n  <body>\n    <div class=\"main_page\">\n      <div class=\"page_header floating_element\">\n        <img src=\"/icons/ubuntu-logo.png\" alt=\"Ubuntu Logo\" class=\"floating_element\"/>\n        <span class=\"floating_element\">\n          Apache2 Ubuntu Default Page\n        </span>\n      </div>\n<!--      <div class=\"table_of_contents floating_element\">\n        <div class=\"section_header section_header_grey\">\n          TABLE OF CONTENTS\n        </div>\n        <div class=\"table_of_contents_item floating_element\">\n          <a href=\"#about\">About</a>\n        </div>\n        <div class=\"table_of_contents_item floating_element\">\n          <a href=\"#changes\">Changes</a>\n        </div>\n        <div class=\"table_of_contents_item floating_element\">\n          <a href=\"#scope\">Scope</a>\n        </div>\n        <div class=\"table_of_contents_item floating_element\">\n          <a href=\"#files\">Config files</a>\n        </div>\n      </div>\n-->\n      <div class=\"content_section floating_element\">\n\n\n        <div class=\"section_header section_header_red\">\n          <div id=\"about\"></div>\n          It works!\n        </div>\n        <div class=\"content_section_text\">\n          <p>\n                This is the default welcome page used to test the correct \n                operation of the Apache2 server after installation on Ubuntu systems.\n                It is based on the equivalent page on Debian, from which the Ubuntu Apache\n                packaging is derived.\n                If you can read this page, it means that the Apache HTTP server installed at\n                this site is working properly. You should <b>replace this file</b> (located at\n                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.\n          </p>\n\n\n          <p>\n                If you are a normal user of this web site and don't know what this page is\n                about, this probably means that the site is currently unavailable due to\n                maintenance.\n                If the problem persists, please contact the site's administrator.\n          </p>\n\n        </div>\n        <div class=\"section_header\">\n          <div id=\"changes\"></div>\n                Configuration Overview\n        </div>\n        <div class=\"content_section_text\">\n          <p>\n                Ubuntu's Apache2 default configuration is different from the\n                upstream default configuration, and split into several files optimized for\n                interaction with Ubuntu tools. The configuration system is\n                <b>fully documented in\n                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full\n                documentation. Documentation for the web server itself can be\n                found by accessing the <a href=\"/manual\">manual</a> if the <tt>apache2-doc</tt>\n                package was installed on this server.\n\n          </p>\n          <p>\n                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:\n          </p>\n          <pre>\n/etc/apache2/\n|-- apache2.conf\n|       `--  ports.conf\n|-- mods-enabled\n|       |-- *.load\n|       `-- *.conf\n|-- conf-enabled\n|       `-- *.conf\n|-- sites-enabled\n|       `-- *.conf\n          </pre>\n          <ul>\n                        <li>\n                           <tt>apache2.conf</tt> is the main configuration\n                           file. It puts the pieces together by including all remaining configuration\n                           files when starting up the web server.\n                        </li>\n\n                        <li>\n                           <tt>ports.conf</tt> is always included from the\n                           main configuration file. It is used to determine the listening ports for\n                           incoming connections, and this file can be customized anytime.\n                        </li>\n\n                        <li>\n                           Configuration files in the <tt>mods-enabled/</tt>,\n                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain\n                           particular configuration snippets which manage modules, global configuration\n                           fragments, or virtual host configurations, respectively.\n                        </li>\n\n                        <li>\n                           They are activated by symlinking available\n                           configuration files from their respective\n                           *-available/ counterparts. These should be managed\n                           by using our helpers\n                           <tt>\n                                a2enmod,\n                                a2dismod,\n                           </tt>\n                           <tt>\n                                a2ensite,\n                                a2dissite,\n                            </tt>\n                                and\n                           <tt>\n                                a2enconf,\n                                a2disconf\n                           </tt>. See their respective man pages for detailed information.\n                        </li>\n\n                        <li>\n                           The binary is called apache2. Due to the use of\n                           environment variables, in the default configuration, apache2 needs to be\n                           started/stopped with <tt>/etc/init.d/apache2</tt> or <tt>apache2ctl</tt>.\n                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the\n                           default configuration.\n                        </li>\n          </ul>\n        </div>\n\n        <div class=\"section_header\">\n            <div id=\"docroot\"></div>\n                Document Roots\n        </div>\n\n        <div class=\"content_section_text\">\n            <p>\n                By default, Ubuntu does not allow access through the web browser to\n                <em>any</em> file apart of those located in <tt>/var/www</tt>,\n                <a href=\"http://httpd.apache.org/docs/2.4/mod/mod_userdir.html\" rel=\"nofollow\">public_html</a>\n                directories (when enabled) and <tt>/usr/share</tt> (for web\n                applications). If your site is using a web document root\n                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your\n                document root directory in <tt>/etc/apache2/apache2.conf</tt>.\n            </p>\n            <p>\n                The default Ubuntu document root is <tt>/var/www/html</tt>. You\n                can make your own virtual hosts under /var/www. This is different\n                to previous releases which provides better security out of the box.\n            </p>\n        </div>\n\n        <div class=\"section_header\">\n          <div id=\"bugs\"></div>\n                Reporting Problems\n        </div>\n        <div class=\"content_section_text\">\n          <p>\n                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the\n                Apache2 package with Ubuntu. However, check <a\n                href=\"https://bugs.launchpad.net/ubuntu/+source/apache2\"\n                rel=\"nofollow\">existing bug reports</a> before reporting a new bug.\n          </p>\n          <p>\n                Please report bugs specific to modules (such as PHP and others)\n                to respective packages, not to the web server itself.\n          </p>\n        </div>\n\n\n\n\n      </div>\n    </div>\n    <div class=\"validator\">\n    </div>\n  </body>\n</html>\n\n",
+        "location": "/",
+        "components": {},
+        "securitytxt_hash": null,
+        "sitemap": null,
+        "html_hash": 1845118841
+      },
+      "timestamp": "2021-12-22T13:55:57.448799",
+      "hostnames": [],
+      "org": "Instituto Politecnico de Viana do Castelo",
+      "data": "HTTP/1.1 200 OK\r\nDate: Wed, 22 Dec 2021 13:55:57 GMT\r\nServer: Apache/2.4.41 (Ubuntu)\r\nUpgrade: h2,h2c\r\nConnection: Upgrade\r\nLast-Modified: Fri, 26 Feb 2021 14:12:09 GMT\r\nETag: \"2aa6-5bc3dda921472\"\r\nAccept-Ranges: bytes\r\nContent-Length: 10918\r\nVary: Accept-Encoding\r\nContent-Type: text/html\r\n\r\n",
+      "asn": "AS15525",
+      "cpe23": ["cpe:2.3:a:apache:http_server:2.4.41"],
+      "info": "(Ubuntu)",
+      "isp": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "cpe": ["cpe:/a:apache:http_server:2.4.41"],
+      "domains": [],
+      "ip_str": "62.28.241.49",
+      "os": null,
+      "_shodan": {
+        "id": "f74c985f-0efe-4a57-94fc-b1b9117c0403",
+        "ptr": true,
+        "options": {},
+        "module": "http",
+        "crawler": "cdd92e2d835a37d2798fa6c7105171f4d214012f"
+      },
+      "opts": {}
+    },
+    {
+      "ip": 1042084145,
+      "hash": -1180720443,
+      "port": 443,
+      "transport": "tcp",
+      "version": "2.4.41",
+      "location": {
+        "city": "Viana do Castelo",
+        "region_code": "16",
+        "area_code": null,
+        "longitude": -8.83287,
+        "country_name": "Portugal",
+        "postal_code": null,
+        "country_code": "PT",
+        "latitude": 41.69323
+      },
+      "product": "Apache httpd",
+      "http": {
+        "status": 500,
+        "robots_hash": -817051907,
+        "redirects": [],
+        "securitytxt": null,
+        "title": "Database Error",
+        "sitemap_hash": null,
+        "robots": "User-Agent: *\n#Disallow: /\nAllow: /?display=wide\nAllow: /wp-content/uploads/\nDisallow: /wp-admin/\nDisallow: /wp-includes/\nDisallow: /wp-content/plugins/\nDisallow: /refer/\nDisallow: /wp-login.php\nDisallow: /readme.html\nDisallow: /BingSiteAuth.xml\nDisallow: /_phpinfo.php\nDisallow: /license.txt\n\nSitemap: https://[DOMAIN]/i18n-index-sitemap.xml\nSitemap: https://[DOMAIN]/sitemap_index.xml",
+        "server": "Apache/2.4.41 (Ubuntu)",
+        "host": "62.28.241.49",
+        "html": "<!DOCTYPE html>\n<html dir='ltr'>\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width\">\n\t\t\t<title>Database Error</title>\n\t<style type=\"text/css\">\n\t\thtml {\n\t\t\tbackground: #f1f1f1;\n\t\t}\n\t\tbody {\n\t\t\tbackground: #fff;\n\t\t\tcolor: #444;\n\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif;\n\t\t\tmargin: 2em auto;\n\t\t\tpadding: 1em 2em;\n\t\t\tmax-width: 700px;\n\t\t\t-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);\n\t\t\tbox-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);\n\t\t}\n\t\th1 {\n\t\t\tborder-bottom: 1px solid #dadada;\n\t\t\tclear: both;\n\t\t\tcolor: #666;\n\t\t\tfont-size: 24px;\n\t\t\tmargin: 30px 0 0 0;\n\t\t\tpadding: 0;\n\t\t\tpadding-bottom: 7px;\n\t\t}\n\t\t#error-page {\n\t\t\tmargin-top: 50px;\n\t\t}\n\t\t#error-page p,\n\t\t#error-page .wp-die-message {\n\t\t\tfont-size: 14px;\n\t\t\tline-height: 1.5;\n\t\t\tmargin: 25px 0 20px;\n\t\t}\n\t\t#error-page code {\n\t\t\tfont-family: Consolas, Monaco, monospace;\n\t\t}\n\t\tul li {\n\t\t\tmargin-bottom: 10px;\n\t\t\tfont-size: 14px ;\n\t\t}\n\t\ta {\n\t\t\tcolor: #0073aa;\n\t\t}\n\t\ta:hover,\n\t\ta:active {\n\t\t\tcolor: #006799;\n\t\t}\n\t\ta:focus {\n\t\t\tcolor: #124964;\n\t\t\t-webkit-box-shadow:\n\t\t\t\t0 0 0 1px #5b9dd9,\n\t\t\t\t0 0 2px 1px rgba(30, 140, 190, 0.8);\n\t\t\tbox-shadow:\n\t\t\t\t0 0 0 1px #5b9dd9,\n\t\t\t\t0 0 2px 1px rgba(30, 140, 190, 0.8);\n\t\t\toutline: none;\n\t\t}\n\t\t.button {\n\t\t\tbackground: #f7f7f7;\n\t\t\tborder: 1px solid #ccc;\n\t\t\tcolor: #555;\n\t\t\tdisplay: inline-block;\n\t\t\ttext-decoration: none;\n\t\t\tfont-size: 13px;\n\t\t\tline-height: 2;\n\t\t\theight: 28px;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0 10px 1px;\n\t\t\tcursor: pointer;\n\t\t\t-webkit-border-radius: 3px;\n\t\t\t-webkit-appearance: none;\n\t\t\tborder-radius: 3px;\n\t\t\twhite-space: nowrap;\n\t\t\t-webkit-box-sizing: border-box;\n\t\t\t-moz-box-sizing:    border-box;\n\t\t\tbox-sizing:         border-box;\n\n\t\t\t-webkit-box-shadow: 0 1px 0 #ccc;\n\t\t\tbox-shadow: 0 1px 0 #ccc;\n\t\t\tvertical-align: top;\n\t\t}\n\n\t\t.button.button-large {\n\t\t\theight: 30px;\n\t\t\tline-height: 2.15384615;\n\t\t\tpadding: 0 12px 2px;\n\t\t}\n\n\t\t.button:hover,\n\t\t.button:focus {\n\t\t\tbackground: #fafafa;\n\t\t\tborder-color: #999;\n\t\t\tcolor: #23282d;\n\t\t}\n\n\t\t.button:focus {\n\t\t\tborder-color: #5b9dd9;\n\t\t\t-webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8);\n\t\t\tbox-shadow: 0 0 3px rgba(0, 115, 170, 0.8);\n\t\t\toutline: none;\n\t\t}\n\n\t\t.button:active {\n\t\t\tbackground: #eee;\n\t\t\tborder-color: #999;\n\t\t\t-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);\n\t\t\tbox-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);\n\t\t}\n\n\t\t\t</style>\n</head>\n<body id=\"error-page\">\n\t<div class=\"wp-die-message\"><h1>Error establishing a database connection</h1></div></body>\n</html>\n\t",
+        "location": "/",
+        "components": {},
+        "securitytxt_hash": null,
+        "sitemap": null,
+        "html_hash": -1926863435
+      },
+      "timestamp": "2021-12-18T01:42:20.762203",
+      "ssl": {
+        "chain_sha256": [
+          "74b8e4618236a0bb33842d12c3c44adb70cfe2253df497ae824602b6f0cd5c66",
+          "37834fa5ea40fbf7b61196955962e1ca0558872435e4206653d3f620dd8e988e",
+          "68b9c761219a5b1f0131784474665db61bbdb109e00f05ca9f74244ee5f5f52b",
+          "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4"
+        ],
+        "jarm": "3fd3fd15d3fd3fd00042d42d0000009435214b849738c4ebab4534b5d158dd",
+        "chain": [
+          "-----BEGIN CERTIFICATE-----\nMIIHSjCCBTKgAwIBAgIRAMxuoEVQGT4Erru6r1/QZoYwDQYJKoZIhvcNAQEMBQAw\nRDELMAkGA1UEBhMCTkwxGTAXBgNVBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNV\nBAMTEUdFQU5UIE9WIFJTQSBDQSA0MB4XDTIxMDIyMjAwMDAwMFoXDTIyMDIyMjIz\nNTk1OVowgdQxCzAJBgNVBAYTAlBUMREwDwYDVQQREwg0OTAwLTM0NzEZMBcGA1UE\nCBMQVmlhbmEgZG8gQ2FzdGVsbzEZMBcGA1UEBxMQVmlhbmEgZG8gQ2FzdGVsbzEQ\nMA4GA1UECQwHbi7CuiAzNDEfMB0GA1UECQwWUFJBw4dBIEdFTkVSQUwgQkFSQk9T\nQTEzMDEGA1UECgwqSW5zdGl0dXRvIFBvbGl0w6ljbmljbyBkZSBWaWFuYSBkbyBD\nYXN0ZWxvMRQwEgYDVQQDEwt3d3cuaXB2Yy5wdDCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBAL6KGICPnQyNq3jdqWpBTnjx4XLZ8JJ+ffpm5Z+vOcf5ENK/\nJiVV3euRtfqjaV90QFGc5GdnbjRH2IBEPrcobOAHP58+/g5Ra7LnM0mJr66EZzuu\nlDgkwuy2nqkKDCs1TvKKFcweUDpiBJ25XDIrdEEZbqUfLlxZZBTBhhcizzQ5f8Yi\nEi7+3tQZK+5KmHqIUhUJdlQcDnuXYe6ECO8uHhQQ5y00rsqkmGs4DzbMO8Ue+HaP\naYyxQbufQV/dp+WTK0G2kauidQKw0N5G5ep2Fi21Thcgkm+sVUgeCumdYZuXcsxX\nLQNUJvTBQ7RrgfdkQsfGQYoRzl9seGBXLq/0l0kCAwEAAaOCAqQwggKgMB8GA1Ud\nIwQYMBaAFG8dNUkQbDL6WaCevIroH5W+cXoMMB0GA1UdDgQWBBTtG+WbZysEMBhz\n/P9dI6XmAxckozAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUE\nFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQIC\nTzAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwB\nAgIwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL0dFQU5ULmNybC5zZWN0aWdvLmNv\nbS9HRUFOVE9WUlNBQ0E0LmNybDB1BggrBgEFBQcBAQRpMGcwOgYIKwYBBQUHMAKG\nLmh0dHA6Ly9HRUFOVC5jcnQuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcnQw\nKQYIKwYBBQUHMAGGHWh0dHA6Ly9HRUFOVC5vY3NwLnNlY3RpZ28uY29tMIIBBAYK\nKwYBBAHWeQIEAgSB9QSB8gDwAHYARqVV63X6kSAwtaKJafTzfREsQXS+/Um4havy\n/HD+bUcAAAF3yUkbtgAABAMARzBFAiEA5TFu6S6pE6pNJ3AEO0jV9iQp+//eH8SK\nxuphIcyScXYCIFR8pcc2KmPKWnaUZ1IJn8BV+bKshTQmw0xVGxyn6uQ7AHYA36Ve\nq2iCTx9sre64X04+WurNohKkal6OOxLAIERcKnMAAAF3yUkb3gAABAMARzBFAiEA\nhrr/3pUZ/l2gdtGndYL4ZK21NIx+Wok4Tru2ONtmEz4CIBjCkrXgeq/ErkmrTAvn\nFlU4521Fg6TZXss+CkX/c9KAMBYGA1UdEQQPMA2CC3d3dy5pcHZjLnB0MA0GCSqG\nSIb3DQEBDAUAA4ICAQAO8mzc/ERCccLbSTDyBP20WRm8RRtX90IzXTOM51pIeynR\nq6Oh085HZCszbhHO7Wtik6KTDJ5xGXqbG1bfM9cN6C+eS7GdyRi0GlwdDbNac3LP\n9PSNP/tI8lU+WE18RKjRm5dySp+k1WQwVEYRJ7MCCA26Vi6vOv1rPygJmUCE573n\nWaLPPMPJd3n9ow3yjpuvNO6fU0ktSvLKgxAjQZVyauA1cqT67gCDQrTN8TgCDu7E\nzbaTNBpLRzjt+qqm3vjoSq458DucRs340ylIX0umX2qF5HzNN7E2h+Sgp0gyKXFc\nr/Q8dXCBmK9FgvU1jsujUFqIGonz/Zxzqy3YyjD7qOQi6U1+orCWZCOtNbLyjlmW\nAGpbcvHIRBtZr/hlJ3RIj7nDGiv3AJ6Az/EU5X7NFVZ0Hi4q44jQDwxtA4oNDNwD\nEBzebfpVDDHvKfZu4q/fSu8F//pYLUhuWnLtCWSvGS8COLJkK2KzQQREeA+XJmeB\nHzNd8xcApRnBzdbgroIQmFzwZPLQBYkre2/jjDPSEI63ekfwDGk4zvXjXrxqF3rx\nqoXMUP0IPQFCPT4H0fqVHi/iidCZrUEYRLGKjRBF9bYoG+4+tiHJtYy9W+fXSJwr\nU+gOcjfCdUIDF7Szdik7aK+aRLFqBPgiRohPFqXSPyJ0C855PrsjiSPXs6taFg==\n-----END CERTIFICATE-----\n",
+          "-----BEGIN CERTIFICATE-----\nMIIG5TCCBM2gAwIBAgIRANpDvROb0li7TdYcrMTz2+AwDQYJKoZIhvcNAQEMBQAw\ngYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5MRQwEgYDVQQHEwtK\nZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMS4wLAYD\nVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTIw\nMDIxODAwMDAwMFoXDTMzMDUwMTIzNTk1OVowRDELMAkGA1UEBhMCTkwxGTAXBgNV\nBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNVBAMTEUdFQU5UIE9WIFJTQSBDQSA0\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEApYhi1aEiPsg9ZKRMAw9Q\nr8Mthsr6R20VSfFeh7TgwtLQi6RSRLOh4or4EMG/1th8lijv7xnBMVZkTysFiPmT\nPiLOfvz+QwO1NwjvgY+Jrs7fSoVA/TQkXzcxu4Tl3WHi+qJmKLJVu/JOuHud6mOp\nLWkIbhODSzOxANJ24IGPx9h4OXDyy6/342eE6UPXCtJ8AzeumTG6Dfv5KVx24lCF\nTGUzHUB+j+g0lSKg/Sf1OzgCajJV9enmZ/84ydh48wPp6vbWf1H0O3Rd3LhpMSVn\nTqFTLKZSbQeLcx/l9DOKZfBCC9ghWxsgTqW9gQ7v3T3aIfSaVC9rnwVxO0VjmDdP\nFNbdoxnh0zYwf45nV1QQgpRwZJ93yWedhp4ch1a6Ajwqs+wv4mZzmBSjovtV0mKw\nd+CQbSToalEUP4QeJq4Udz5WNmNMI4OYP6cgrnlJ50aa0DZPlJqrKQPGL69KQQz1\n2WgxvhCuVU70y6ZWAPopBa1ykbsttpLxADZre5cH573lIuLHdjx7NjpYIXRx2+QJ\nURnX2qx37eZIxYXz8ggM+wXH6RDbU3V2o5DP67hXPHSAbA+p0orjAocpk2osxHKo\nNSE3LCjNx8WVdxnXvuQ28tKdaK69knfm3bB7xpdfsNNTPH9ElcjscWZxpeZ5Iij8\nlyrCG1z0vSWtSBsgSnUyG/sCAwEAAaOCAYswggGHMB8GA1UdIwQYMBaAFFN5v1qq\nK0rPVIDh2JvAnfKyA2bLMB0GA1UdDgQWBBRvHTVJEGwy+lmgnryK6B+VvnF6DDAO\nBgNVHQ8BAf8EBAMCAYYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHSUEFjAUBggr\nBgEFBQcDAQYIKwYBBQUHAwIwOAYDVR0gBDEwLzAtBgRVHSAAMCUwIwYIKwYBBQUH\nAgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMFAGA1UdHwRJMEcwRaBDoEGGP2h0\ndHA6Ly9jcmwudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FDZXJ0aWZpY2F0aW9u\nQXV0aG9yaXR5LmNybDB2BggrBgEFBQcBAQRqMGgwPwYIKwYBBQUHMAKGM2h0dHA6\nLy9jcnQudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FBZGRUcnVzdENBLmNydDAl\nBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTANBgkqhkiG9w0B\nAQwFAAOCAgEAUtlC3e0xj/1BMfPhdQhUXeLjb0xp8UE28kzWE5xDzGKbfGgnrT2R\nlw5gLIx+/cNVrad//+MrpTppMlxq59AsXYZW3xRasrvkjGfNR3vt/1RAl8iI31lG\nhIg6dfIX5N4esLkrQeN8HiyHKH6khm4966IkVVtnxz5CgUPqEYn4eQ+4eeESrWBh\nAqXaiv7HRvpsdwLYekAhnrlGpioZ/CJIT2PTTxf+GHM6cuUnNqdUzfvrQgA8kt1/\nASXx2od/M+c8nlJqrGz29lrJveJOSEMX0c/ts02WhsfMhkYa6XujUZLmvR1Eq08r\n48/EZ4l+t5L4wt0DV8VaPbsEBF1EOFpz/YS2H6mSwcFaNJbnYqqJHIvm3PLJHkFm\nEoLXRVrQXdCT+3wgBfgU6heCV5CYBz/YkrdWES7tiiT8sVUDqXmVlTsbiRNiyLs2\nbmEWWFUl76jViIJog5fongEqN3jLIGTG/mXrJT1UyymIcobnIGrbwwRVz/mpFQo0\nvBYIi1k2ThVh0Dx88BbF9YiP84dd8Fkn5wbE6FxXYJ287qfRTgmhePecPc73Yrzt\napdRcsKVGkOpaTIJP/l+lAHRLZxk/dUtyN95G++bOSQqnOCpVPabUGl2E/OEyFrp\nIpwgu2L/WJclvd6g+ZA/iWkLSMcpnFb+uX6QBqvD6+RNxul1FaB5iHY=\n-----END CERTIFICATE-----\n",
+          "-----BEGIN CERTIFICATE-----\nMIIFgTCCBGmgAwIBAgIQOXJEOvkit1HX02wQ3TE1lTANBgkqhkiG9w0BAQwFADB7\nMQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD\nVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UE\nAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTE5MDMxMjAwMDAwMFoXDTI4\nMTIzMTIzNTk1OVowgYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5\nMRQwEgYDVQQHEwtKZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBO\nZXR3b3JrMS4wLAYDVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0\naG9yaXR5MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgBJlFzYOw9sI\ns9CsVw127c0n00ytUINh4qogTQktZAnczomfzD2p7PbPwdzx07HWezcoEStH2jnG\nvDoZtF+mvX2do2NCtnbyqTsrkfjib9DsFiCQCT7i6HTJGLSR1GJk23+jBvGIGGqQ\nIjy8/hPwhxR79uQfjtTkUcYRZ0YIUcuGFFQ/vDP+fmyc/xadGL1RjjWmp2bIcmfb\nIWax1Jt4A8BQOujM8Ny8nkz+rwWWNR9XWrf/zvk9tyy29lTdyOcSOk2uTIq3XJq0\ntyA9yn8iNK5+O2hmAUTnAU5GU5szYPeUvlM3kHND8zLDU+/bqv50TmnHa4xgk97E\nxwzf4TKuzJM7UXiVZ4vuPVb+DNBpDxsP8yUmazNt925H+nND5X4OpWaxKXwyhGNV\nicQNwZNUMBkTrNN9N6frXTpsNVzbQdcS2qlJC9/YgIoJk2KOtWbPJYjNhLixP6Q5\nD9kCnusSTJV882sFqV4Wg8y4Z+LoE53MW4LTTLPtW//e5XOsIzstAL81VXQJSdhJ\nWBp/kjbmUZIO8yZ9HE0XvMnsQybQv0FfQKlERPSZ51eHnlAfV1SoPv10Yy+xUGUJ\n5lhCLkMaTLTwJUdZ+gQek9QmRkpQgbLevni3/GcV4clXhB4PY9bpYrrWX1Uu6lzG\nKAgEJTm4Diup8kyXHAc/DVL17e8vgg8CAwEAAaOB8jCB7zAfBgNVHSMEGDAWgBSg\nEQojPpbxB+zirynvgqV/0DCktDAdBgNVHQ4EFgQUU3m/WqorSs9UgOHYm8Cd8rID\nZsswDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wEQYDVR0gBAowCDAG\nBgRVHSAAMEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6Ly9jcmwuY29tb2RvY2EuY29t\nL0FBQUNlcnRpZmljYXRlU2VydmljZXMuY3JsMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMA0GCSqGSIb3DQEBDAUA\nA4IBAQAYh1HcdCE9nIrgJ7cz0C7M7PDmy14R3iJvm3WOnnL+5Nb+qh+cli3vA0p+\nrvSNb3I8QzvAP+u431yqqcau8vzY7qN7Q/aGNnwU4M309z/+3ri0ivCRlv79Q2R+\n/czSAaF9ffgZGclCKxO/WIu6pKJmBHaIkU4MiRTOok3JMrO66BQavHHxW/BBC5gA\nCiIDEOUMsfnNkjcZ7Tvx5Dq2+UUTJnWvu6rvP3t3O9LEApE9GQDTF1w52z97GA1F\nzZOFli9d31kWTz9RvdVFGD/tSo7oBmF0Ixa1DVBzJ0RHfxBdiSprhTEUxOipakyA\nvGp4z7h/jnZymQyd/teRCBaho1+V\n-----END CERTIFICATE-----\n",
+          "-----BEGIN CERTIFICATE-----\nMIIEMjCCAxqgAwIBAgIBATANBgkqhkiG9w0BAQUFADB7MQswCQYDVQQGEwJHQjEb\nMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHDAdTYWxmb3JkMRow\nGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UEAwwYQUFBIENlcnRpZmlj\nYXRlIFNlcnZpY2VzMB4XDTA0MDEwMTAwMDAwMFoXDTI4MTIzMTIzNTk1OVowezEL\nMAkGA1UEBhMCR0IxGzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UE\nBwwHU2FsZm9yZDEaMBgGA1UECgwRQ29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMM\nGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczCCASIwDQYJKoZIhvcNAQEBBQADggEP\nADCCAQoCggEBAL5AnfRu4ep2hxxNRUSOvkbIgwadwSr+GB+O5AL686tdUIoWMQua\nBtDFcCLNSS1UY8y2bmhGC1Pqy0wkwLxyTurxFa70VJoSCsN6sjNg4tqJVfMiWPPe\n3M/vg4aijJRPn2jymJBGhCfHdr/jzDUsi14HZGWCwEiwqJH5YZ92IFCokcdmtet4\nYgNW8IoaE+oxox6gmf049vYnMlhvB/VruPsUK6+3qszWY19zjNoFmag4qMsXeDZR\nrOme9Hg6jc8P2ULimAyrL58OAd7vn5lJ8S3frHRNG5i1R8XlKdH5kBjHYpy+g8cm\nez6KJcfA3Z3mNWgQIJ2P2N7Sw4ScDV7oL8kCAwEAAaOBwDCBvTAdBgNVHQ4EFgQU\noBEKIz6W8Qfs4q8p74Klf9AwpLQwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQF\nMAMBAf8wewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5jb21vZG9jYS5jb20v\nQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwuY29t\nb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDANBgkqhkiG9w0BAQUF\nAAOCAQEACFb8AvCb6P+k+tZ7xkSAzk/ExfYAWMymtrwUSWgEdujm7l3sAg9g1o1Q\nGE8mTgHj5rCl7r+8dFRBv/38ErjHT1r0iWAFf2C3BUrz9vHCv8S5dIa2LX1rzNLz\nRt0vxuBqw8M0Ayx9lt1awg6nCpnBBYurDC/zXDrPbDdVCYfeU0BsWO/8tqtlbgT2\nG9w84FoVxp7Z8VlIMCFlA2zs6SFz7JsDoeA3raAVGI/6ugLOpyypEBMs1OUIJqsi\nl2D4kF501KKaU73yqWjgom7C12yxow+ev+to51byrvLjKzg6CYG1a4XXvi3tPxq3\nsmPi9WIsgtRqAEFQ8TmDn5XpNpaYbg==\n-----END CERTIFICATE-----\n"
+        ],
+        "dhparams": {
+          "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aacaa68ffffffffffffffff",
+          "public_key": "a7e8190e984b1f7f5c764459822c542a6a04773da056ba48a928b5edf92d888b96d9162ad4e824298a9a4202b98c2fcc6b12e409764aad56b4047b27ba90ea18da98796c58d4576dc6080f1a45a9446778a17c62d5e5a65a576650642c97f193a656a9cc3fad56370bf1a7877006d7ffaa28dcf33c0d7ae0a5af2eb66f5c60262d8b0e3bba77ba8f8b45524aa994abf86dacfca6976c52d56d95aaa17e26c86264c9748cb6e11dce85645581c7eba0a593eca7f3666b8ad95f94867cab4e86b1c2fc91689e00ec10e4575fd7d65de3ea83ddc88faa5ed52bb407527b6515c2ddb679298cdc369c7339e76097f2913ad593cb816be483bde193cca5005259e5eb",
+          "bits": 2048,
+          "generator": 2,
+          "fingerprint": "RFC3526/Oakley Group 14"
+        },
+        "versions": [
+          "-TLSv1",
+          "-SSLv2",
+          "-SSLv3",
+          "-TLSv1.1",
+          "TLSv1.2",
+          "TLSv1.3"
+        ],
+        "acceptable_cas": [],
+        "tlsext": [
+          { "id": 65281, "name": "renegotiation_info" },
+          { "id": 11, "name": "ec_point_formats" },
+          { "id": 35, "name": "session_ticket" }
+        ],
+        "alpn": [],
+        "cert": {
+          "sig_alg": "sha384WithRSAEncryption",
+          "issued": "20210222000000Z",
+          "expires": "20220222235959Z",
+          "pubkey": { "bits": 2048, "type": "rsa" },
+          "version": 2,
+          "extensions": [
+            {
+              "data": "0\\x16\\x80\\x14o\\x1d5I\\x10l2\\xfaY\\xa0\\x9e\\xbc\\x8a\\xe8\\x1f\\x95\\xbeqz\\x0c",
+              "name": "authorityKeyIdentifier"
+            },
+            {
+              "data": "\\x04\\x14\\xed\\x1b\\xe5\\x9bg+\\x040\\x18s\\xfc\\xff]#\\xa5\\xe6\\x03\\x17$\\xa3",
+              "name": "subjectKeyIdentifier"
+            },
+            {
+              "critical": true,
+              "data": "\\x03\\x02\\x05\\xa0",
+              "name": "keyUsage"
+            },
+            { "critical": true, "data": "0\\x00", "name": "basicConstraints" },
+            {
+              "data": "0\\x14\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x03\\x01\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x03\\x02",
+              "name": "extendedKeyUsage"
+            },
+            {
+              "data": "0@04\\x06\\x0b+\\x06\\x01\\x04\\x01\\xb21\\x01\\x02\\x02O0%0#\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x02\\x01\\x16\\x17https://sectigo.com/CPS0\\x08\\x06\\x06g\\x81\\x0c\\x01\\x02\\x02",
+              "name": "certificatePolicies"
+            },
+            {
+              "data": "0604\\xa02\\xa00\\x86.http://GEANT.crl.sectigo.com/GEANTOVRSACA4.crl",
+              "name": "crlDistributionPoints"
+            },
+            {
+              "data": "0g0:\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x02\\x86.http://GEANT.crt.sectigo.com/GEANTOVRSACA4.crt0)\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x01\\x86\\x1dhttp://GEANT.ocsp.sectigo.com",
+              "name": "authorityInfoAccess"
+            },
+            {
+              "data": "\\x04\\x81\\xf2\\x00\\xf0\\x00v\\x00F\\xa5U\\xebu\\xfa\\x91 0\\xb5\\xa2\\x89i\\xf4\\xf3}\\x11,At\\xbe\\xfdI\\xb8\\x85\\xab\\xf2\\xfcp\\xfemG\\x00\\x00\\x01w\\xc9I\\x1b\\xb6\\x00\\x00\\x04\\x03\\x00G0E\\x02!\\x00\\xe51n\\xe9.\\xa9\\x13\\xaaM\\'p\\x04;H\\xd5\\xf6$)\\xfb\\xff\\xde\\x1f\\xc4\\x8a\\xc6\\xeaa!\\xcc\\x92qv\\x02 T|\\xa5\\xc76*c\\xcaZv\\x94gR\\t\\x9f\\xc0U\\xf9\\xb2\\xac\\x854&\\xc3LU\\x1b\\x1c\\xa7\\xea\\xe4;\\x00v\\x00\\xdf\\xa5^\\xabh\\x82O\\x1fl\\xad\\xee\\xb8_N>Z\\xea\\xcd\\xa2\\x12\\xa4j^\\x8e;\\x12\\xc0 D\\\\*s\\x00\\x00\\x01w\\xc9I\\x1b\\xde\\x00\\x00\\x04\\x03\\x00G0E\\x02!\\x00\\x86\\xba\\xff\\xde\\x95\\x19\\xfe]\\xa0v\\xd1\\xa7u\\x82\\xf8d\\xad\\xb54\\x8c~Z\\x898N\\xbb\\xb68\\xdbf\\x13>\\x02 \\x18\\xc2\\x92\\xb5\\xe0z\\xaf\\xc4\\xaeI\\xabL\\x0b\\xe7\\x16U8\\xe7mE\\x83\\xa4\\xd9^\\xcb>\\nE\\xffs\\xd2\\x80",
+              "name": "ct_precert_scts"
+            },
+            { "data": "0\\r\\x82\\x0bwww.ipvc.pt", "name": "subjectAltName" }
+          ],
+          "fingerprint": {
+            "sha256": "74b8e4618236a0bb33842d12c3c44adb70cfe2253df497ae824602b6f0cd5c66",
+            "sha1": "20789f27da000bb3025bca4e516c4d323b9c8924"
+          },
+          "serial": 2.717369144716308e38,
+          "issuer": {
+            "C": "NL",
+            "CN": "GEANT OV RSA CA 4",
+            "O": "GEANT Vereniging"
+          },
+          "expired": false,
+          "subject": {
+            "C": "PT",
+            "CN": "www.ipvc.pt",
+            "L": "Viana do Castelo",
+            "O": "Instituto Politécnico de Viana do Castelo",
+            "ST": "Viana do Castelo",
+            "street": "PRAÇA GENERAL BARBOSA",
+            "postalCode": "4900-347"
+          }
+        },
+        "cipher": {
+          "version": "TLSv1/SSLv3",
+          "bits": 128,
+          "name": "ECDHE-RSA-AES128-GCM-SHA256"
+        },
+        "trust": {
+          "revoked": false,
+          "browser": { "mozilla": true, "apple": true, "microsoft": true }
+        },
+        "handshake_states": [
+          "before/connect initialization",
+          "SSLv2/v3 write client hello",
+          "SSLv2/v3 read server hello",
+          "SSLv3/TLS read server hello",
+          "SSLv3/TLS read server certificate",
+          "SSLv3/TLS read server key exchange",
+          "SSLv3/TLS read server done",
+          "SSLv3/TLS write client key exchange",
+          "SSLv3/TLS write change cipher spec",
+          "SSLv3/TLS write finished",
+          "SSLv3/TLS flush data",
+          "SSLv3/TLS read server session ticket",
+          "SSLv3/TLS read finished",
+          "SSL negotiation finished successfully"
+        ],
+        "ja3s": "ccc514751b175866924439bdbb5bba34",
+        "ocsp": {}
+      },
+      "hostnames": [],
+      "org": "Instituto Politecnico de Viana do Castelo",
+      "data": "HTTP/1.1 500 Internal Server Error\r\nDate: Sat, 18 Dec 2021 01:42:20 GMT\r\nServer: Apache/2.4.41 (Ubuntu)\r\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\r\nCache-Control: no-cache, must-revalidate, max-age=0\r\nUpgrade: h2\r\nConnection: Upgrade, close\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+      "asn": "AS15525",
+      "cpe23": ["cpe:2.3:a:apache:http_server:2.4.41"],
+      "info": "(Ubuntu)",
+      "isp": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "cpe": ["cpe:/a:apache:http_server:2.4.41"],
+      "domains": [],
+      "ip_str": "62.28.241.49",
+      "os": null,
+      "_shodan": {
+        "id": "2f934fce-0030-47de-98bf-810a2ab28e8d",
+        "ptr": true,
+        "options": {},
+        "module": "https",
+        "crawler": "d905ab419aeb10e9c57a336c7e1aa9629ae4a733"
+      },
+      "opts": {
+        "vulns": [],
+        "heartbleed": "2021/12/18 01:42:26 62.28.241.49:443 - SAFE\n"
+      }
+    },
+    {
+      "_shodan": {
+        "id": "1c69c259-dcf5-43f5-a09a-3d8c553a40ad",
+        "ptr": true,
+        "options": {},
+        "module": "ike",
+        "crawler": "49217c0cdcbcebaf23c2979ae16d4eba64180b1f"
+      },
+      "hash": 225018252,
+      "os": null,
+      "tags": ["vpn"],
+      "opts": {
+        "raw": "77316a3935327430636f6176676c69372920252800000000000000240000000800000005"
+      },
+      "timestamp": "2021-12-14T03:18:11.149190",
+      "isp": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "port": 500,
+      "isakmp": {
+        "initiator_spi": "77316a3935327430",
+        "responder_spi": "636f6176676c6937",
+        "msg_id": "00000000",
+        "next_payload": 41,
+        "exchange_type": 37,
+        "length": 36,
+        "version": "2.0",
+        "flags": {
+          "encryption": false,
+          "authentication": false,
+          "commit": false
+        },
+        "aggressive": {
+          "initiator_spi": "a6517b6a97dca862",
+          "responder_spi": "81f85c2da0c42b06",
+          "msg_id": "aba56318",
+          "next_payload": 11,
+          "exchange_type": 5,
+          "length": 40,
+          "version": "1.0",
+          "flags": {
+            "encryption": false,
+            "authentication": false,
+            "commit": false
+          },
+          "vendor_ids": []
+        },
+        "vendor_ids": []
+      },
+      "hostnames": [],
+      "location": {
+        "city": "Viana do Castelo",
+        "region_code": "16",
+        "area_code": null,
+        "longitude": -8.83287,
+        "country_name": "Portugal",
+        "postal_code": null,
+        "country_code": "PT",
+        "latitude": 41.69323
+      },
+      "ip": 1042084145,
+      "domains": [],
+      "org": "Instituto Politecnico de Viana do Castelo",
+      "data": "VPN (IKE)\n\nInitiator SPI: 77316a3935327430\nResponder SPI: 636f6176676c6937\nNext Payload: RESERVED\nVersion: 2.0\nExchange Type: DOI Specific Use\nFlags:\n    Encryption:     False\n    Commit:         False\n    Authentication: False\nMessage ID: 00000000\nLength: 36",
+      "asn": "AS15525",
+      "transport": "udp",
+      "ip_str": "62.28.241.49"
+    },
+    {
+      "_shodan": {
+        "id": "b15b84d4-28bd-4225-9299-4c6c1c12cb91",
+        "ptr": true,
+        "options": {},
+        "module": "pptp",
+        "crawler": "bf213bc419cc8491376c12af31e32623c1b6f467"
+      },
+      "hash": 334433645,
+      "os": null,
+      "tags": ["vpn"],
+      "opts": {
+        "raw": "009c00011a2b3c4d00020000010001000000000000000000000100016c6f63616c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006c696e75780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "timestamp": "2021-12-12T12:36:51.875478",
+      "isp": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "port": 1723,
+      "hostnames": [],
+      "location": {
+        "city": "Viana do Castelo",
+        "region_code": "16",
+        "area_code": null,
+        "longitude": -8.83287,
+        "country_name": "Portugal",
+        "postal_code": null,
+        "country_code": "PT",
+        "latitude": 41.69323
+      },
+      "ip": 1042084145,
+      "domains": [],
+      "org": "Instituto Politecnico de Viana do Castelo",
+      "data": "Firmware: 1\nHostname: local\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\nVendor: linux\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "asn": "AS15525",
+      "transport": "tcp",
+      "ip_str": "62.28.241.49"
+    }
+  ],
+  "asn": "AS15525",
+  "ip_str": "62.28.241.49"
+}

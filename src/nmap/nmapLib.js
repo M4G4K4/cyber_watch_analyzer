@@ -25,7 +25,8 @@ async function scanMapped(ip, useScript, serviceVersion, osVersion, script) {
     try {
         const comand = constructCommand(ip, useScript, serviceVersion, osVersion, script);
         const scanResult = execSync(comand);
-        return mapper.mapNmapResult(await xml2js.parseStringPromise(scanResult), useScript, serviceVersion, osVersion, script);
+        const nmapJsonResponse = await xml2js.parseStringPromise(scanResult); 
+        return mapper.mapNmapResult(nmapJsonResponse, useScript, serviceVersion, osVersion, script);
     } catch (e) {
         console.log(e);
     }
@@ -46,6 +47,7 @@ function constructCommand(ip, useScript, serviceVersion, osVersion, script) {
         if (allowedScript.includes(script)) {
             command += '--script ' + script + ' ';
         } else {
+            // TODO: Test this scenario
             throw Error("Wrong script");
         }
     }

@@ -9,21 +9,28 @@ async function websiteRequest(url){
         return null;
     }
 
-    const request = await axios({
-        url: url,
-        method: 'GET'
+    const response = await axios.get(url)
+    .then(function (response) {
+        return response;
+    })
+    .catch(function (error) {
+        return null;
     });
 
-    if(request.status == 404){
-        console.error('Headers - Not found');
-    }else if(request.status == 400){
-        console.error('Headers - Bad Request');
-    }else if(request.status == 200){
-        if(request.headers != undefined){
-            result = mapper.mapHeaders(request.headers);
-        }
+    if(response === null){
+        return null;
     }
 
+    if(response.status == 404){
+        console.error('Headers - Not found');
+    }else if(response.status == 400){
+        console.error('Headers - Bad Request');
+    }else if(response.status == 200){
+        if(response.headers != undefined){
+            console.log(response.headers)
+            result = mapper.mapHeaders(response.headers);
+        }
+    }
     return result;
 }
 

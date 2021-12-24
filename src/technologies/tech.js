@@ -1,3 +1,5 @@
+//TODO: Do this mapping 
+
 const Wappalyzer = require('wappalyzer');
 
 const url = 'https://www.ipvc.pt';

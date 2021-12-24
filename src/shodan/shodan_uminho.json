@@ -1,0 +1,245 @@
+{
+  "region_code": "03",
+  "tags": [],
+  "ip": 3246983538,
+  "area_code": null,
+  "domains": ["uminho.pt"],
+  "hostnames": ["www.uminho.pt"],
+  "postal_code": null,
+  "country_code": "PT",
+  "org": "Universidade do Minho",
+  "data": [
+    {
+      "hash": 0,
+      "http": {
+        "status": null,
+        "robots_hash": null,
+        "redirects": [],
+        "securitytxt": null,
+        "title": null,
+        "sitemap_hash": null,
+        "robots": null,
+        "server": null,
+        "host": "193.137.9.114",
+        "html": null,
+        "location": "/",
+        "html_hash": null,
+        "sitemap": null,
+        "securitytxt_hash": null
+      },
+      "timestamp": "2021-12-20T08:02:13.924444",
+      "org": "Universidade do Minho",
+      "isp": "Fundacao para a Ciencia e a Tecnologia, I.P.",
+      "data": "",
+      "asn": "AS1930",
+      "port": 443,
+      "ssl": {
+        "chain_sha256": [
+          "578b42546de0527ba75c7f0f4ebde43203a7678dbda527c18faad8da7da42029",
+          "37834fa5ea40fbf7b61196955962e1ca0558872435e4206653d3f620dd8e988e",
+          "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2"
+        ],
+        "jarm": "29d29d15d29d29d21c29d29d29d29dc5c12909cabb273058cc881ddb7a738d",
+        "chain": [
+          "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----\n",
+          "-----BEGIN CERTIFICATE-----\nMIIG5TCCBM2gAwIBAgIRANpDvROb0li7TdYcrMTz2+AwDQYJKoZIhvcNAQEMBQAw\ngYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5MRQwEgYDVQQHEwtK\nZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMS4wLAYD\nVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTIw\nMDIxODAwMDAwMFoXDTMzMDUwMTIzNTk1OVowRDELMAkGA1UEBhMCTkwxGTAXBgNV\nBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNVBAMTEUdFQU5UIE9WIFJTQSBDQSA0\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEApYhi1aEiPsg9ZKRMAw9Q\nr8Mthsr6R20VSfFeh7TgwtLQi6RSRLOh4or4EMG/1th8lijv7xnBMVZkTysFiPmT\nPiLOfvz+QwO1NwjvgY+Jrs7fSoVA/TQkXzcxu4Tl3WHi+qJmKLJVu/JOuHud6mOp\nLWkIbhODSzOxANJ24IGPx9h4OXDyy6/342eE6UPXCtJ8AzeumTG6Dfv5KVx24lCF\nTGUzHUB+j+g0lSKg/Sf1OzgCajJV9enmZ/84ydh48wPp6vbWf1H0O3Rd3LhpMSVn\nTqFTLKZSbQeLcx/l9DOKZfBCC9ghWxsgTqW9gQ7v3T3aIfSaVC9rnwVxO0VjmDdP\nFNbdoxnh0zYwf45nV1QQgpRwZJ93yWedhp4ch1a6Ajwqs+wv4mZzmBSjovtV0mKw\nd+CQbSToalEUP4QeJq4Udz5WNmNMI4OYP6cgrnlJ50aa0DZPlJqrKQPGL69KQQz1\n2WgxvhCuVU70y6ZWAPopBa1ykbsttpLxADZre5cH573lIuLHdjx7NjpYIXRx2+QJ\nURnX2qx37eZIxYXz8ggM+wXH6RDbU3V2o5DP67hXPHSAbA+p0orjAocpk2osxHKo\nNSE3LCjNx8WVdxnXvuQ28tKdaK69knfm3bB7xpdfsNNTPH9ElcjscWZxpeZ5Iij8\nlyrCG1z0vSWtSBsgSnUyG/sCAwEAAaOCAYswggGHMB8GA1UdIwQYMBaAFFN5v1qq\nK0rPVIDh2JvAnfKyA2bLMB0GA1UdDgQWBBRvHTVJEGwy+lmgnryK6B+VvnF6DDAO\nBgNVHQ8BAf8EBAMCAYYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHSUEFjAUBggr\nBgEFBQcDAQYIKwYBBQUHAwIwOAYDVR0gBDEwLzAtBgRVHSAAMCUwIwYIKwYBBQUH\nAgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMFAGA1UdHwRJMEcwRaBDoEGGP2h0\ndHA6Ly9jcmwudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FDZXJ0aWZpY2F0aW9u\nQXV0aG9yaXR5LmNybDB2BggrBgEFBQcBAQRqMGgwPwYIKwYBBQUHMAKGM2h0dHA6\nLy9jcnQudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FBZGRUcnVzdENBLmNydDAl\nBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTANBgkqhkiG9w0B\nAQwFAAOCAgEAUtlC3e0xj/1BMfPhdQhUXeLjb0xp8UE28kzWE5xDzGKbfGgnrT2R\nlw5gLIx+/cNVrad//+MrpTppMlxq59AsXYZW3xRasrvkjGfNR3vt/1RAl8iI31lG\nhIg6dfIX5N4esLkrQeN8HiyHKH6khm4966IkVVtnxz5CgUPqEYn4eQ+4eeESrWBh\nAqXaiv7HRvpsdwLYekAhnrlGpioZ/CJIT2PTTxf+GHM6cuUnNqdUzfvrQgA8kt1/\nASXx2od/M+c8nlJqrGz29lrJveJOSEMX0c/ts02WhsfMhkYa6XujUZLmvR1Eq08r\n48/EZ4l+t5L4wt0DV8VaPbsEBF1EOFpz/YS2H6mSwcFaNJbnYqqJHIvm3PLJHkFm\nEoLXRVrQXdCT+3wgBfgU6heCV5CYBz/YkrdWES7tiiT8sVUDqXmVlTsbiRNiyLs2\nbmEWWFUl76jViIJog5fongEqN3jLIGTG/mXrJT1UyymIcobnIGrbwwRVz/mpFQo0\nvBYIi1k2ThVh0Dx88BbF9YiP84dd8Fkn5wbE6FxXYJ287qfRTgmhePecPc73Yrzt\napdRcsKVGkOpaTIJP/l+lAHRLZxk/dUtyN95G++bOSQqnOCpVPabUGl2E/OEyFrp\nIpwgu2L/WJclvd6g+ZA/iWkLSMcpnFb+uX6QBqvD6+RNxul1FaB5iHY=\n-----END CERTIFICATE-----\n",
+          "-----BEGIN CERTIFICATE-----\nMIIF3jCCA8agAwIBAgIQAf1tMPyjylGoG7xkDjUDLTANBgkqhkiG9w0BAQwFADCB\niDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0pl\ncnNleSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNV\nBAMTJVVTRVJUcnVzdCBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTAw\nMjAxMDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCBiDELMAkGA1UEBhMCVVMxEzARBgNV\nBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0plcnNleSBDaXR5MR4wHAYDVQQKExVU\naGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNVBAMTJVVTRVJUcnVzdCBSU0EgQ2Vy\ndGlmaWNhdGlvbiBBdXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK\nAoICAQCAEmUXNg7D2wiz0KxXDXbtzSfTTK1Qg2HiqiBNCS1kCdzOiZ/MPans9s/B\n3PHTsdZ7NygRK0faOca8Ohm0X6a9fZ2jY0K2dvKpOyuR+OJv0OwWIJAJPuLodMkY\ntJHUYmTbf6MG8YgYapAiPLz+E/CHFHv25B+O1ORRxhFnRghRy4YUVD+8M/5+bJz/\nFp0YvVGONaanZshyZ9shZrHUm3gDwFA66Mzw3LyeTP6vBZY1H1dat//O+T23LLb2\nVN3I5xI6Ta5MirdcmrS3ID3KfyI0rn47aGYBROcBTkZTmzNg95S+UzeQc0PzMsNT\n79uq/nROacdrjGCT3sTHDN/hMq7MkztReJVni+49Vv4M0GkPGw/zJSZrM233bkf6\nc0Plfg6lZrEpfDKEY1WJxA3Bk1QwGROs0303p+tdOmw1XNtB1xLaqUkL39iAigmT\nYo61Zs8liM2EuLE/pDkP2QKe6xJMlXzzawWpXhaDzLhn4ugTncxbgtNMs+1b/97l\nc6wjOy0AvzVVdAlJ2ElYGn+SNuZRkg7zJn0cTRe8yexDJtC/QV9AqURE9JnnV4ee\nUB9XVKg+/XRjL7FQZQnmWEIuQxpMtPAlR1n6BB6T1CZGSlCBst6+eLf8ZxXhyVeE\nHg9j1uliutZfVS7qXMYoCAQlObgOK6nyTJccBz8NUvXt7y+CDwIDAQABo0IwQDAd\nBgNVHQ4EFgQUU3m/WqorSs9UgOHYm8Cd8rIDZsswDgYDVR0PAQH/BAQDAgEGMA8G\nA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEMBQADggIBAFzUfA3P9wF9QZllDHPF\nUp/L+M+ZBn8b2kMVn54CVVeWFPFSPCeHlCjtHzoBN6J2/FNQwISbxmtOuowhT6KO\nVWKR82kV2LyI48SqC/3vqOlLVSoGIG1VeCkZ7l8wXEskEVX/JJpuXior7gtNn3/3\nATiUFJVDBwn7YKnuHKsSjKCaXqeYalltiz8I+8jRRa8YFWSQEg9zKC7F4iRO/Fjs\n8PRF/iKz6y+O0tlFYQXBl2+odnKPi4w2r78NBc5xjeambx9spnFixdjQg3IM8WcR\niQycE0xyNN+81XHfqnHd4blsjDwSXWXavVcStkNr/+XeTWYRUc+ZruwXtuhxkYze\nSf7dNXGiFSeUHM9h4ya7b6NnJSFd5t0dCy5oGzuCr+yDZ4XUmFF0sbmZgIn/f3gZ\nXHlKYC6SQK5MNyosycdiyA5d9zZbyuAlJQG03RoHnHcAP9Dc1ew91Pq7P8yF1m9/\nqS3fuQL39ZeatTXaw2ewh0qpKJ4jjv9cJ2vhsE/zB+4ALtRZh8tSQZXq9EfX7mRB\nVXyNWQKV3WKdwrnuWih0hKWbt5DHDAff9Yk2dDLWKMGwsAvgnEzDHNb842m1R0aB\nL6KCq9NjRHDEjf8tM7qtj3u1cIiuPhnPQCjY/MiQu12ZIvVS5ljFH4gxQ+6IHdfG\njjxDah2nGN59PRbxYvnKkKj9\n-----END CERTIFICATE-----\n"
+        ],
+        "dhparams": {
+          "prime": "86d598fbbe09a21371f799285cfbf1778d0ec4b1365cb9cc0786944275119d0ca2b87fae48022659001783d693792889e8ad94c0bb3f2892e57b998214cf9e42e5d20f3113842dda51a7532acfc36ac74977a1793ec6f6001f8da0828e8d7504e45936fc7157867fa3a2c279e792854f7f4f97ef2b60ad1afd723ab6615651d5898dbb523a6d646438f2d8eb1fbd336e565a3f5d520581cc0a84e0fc5a025fb5cb9f09922acf2c3d39295b13226ddd4430b654c335309a36bcdc2e71d30a57af06eaaed0f0ee087e369a497b8356df75227090775ddb15609590285620b271ff8a143a0a38d3a371e9be8a210a96504faa8fa07721be91523cd35c53e615e80b",
+          "public_key": "304929b4fba1d4a7ab39681598ec48936516c78cea8be7395470ff71030d66a0039b969b6b1af7ebb6e202089e3c4bd7206e6f0f08c440a3e18f604d46d2ba4317b8c9961ff150a5ae7ae72f7636f7f1f66cac958b6861cfd283bb2b5d110d8c7cb16ff7bb187cf325968832abe82525cd4093b40c74ecdbdfd4ec49ce3b290dd904615bc5ccaeb1b47c02ee6ba3abfe1832dfd8c223d7d39d6fb26f995a30ad7c508a249aab25b1faa8731d5b2b37c32f26bb2fc7856858e34cd6023222371da7ecf830f5f19230b8037849e96024413c44c8386cf66ae2c05bbba239f6ba1e25eb6a9a1ceb4bd28b23ad44cf4254464c55f39a67980dad573be0d85ff546eb",
+          "bits": 2048,
+          "generator": "457444002c971229c42b3b3cdb300803dc6f6dd62a357e37a2a1cc59df81c4250c1d9532d3fb36395e7fff248d1d09c9d21c2cda397ec48766403241488f253b7dcd147da236f9cc9acad6370af3b7add76d091f916543f2eccbd90f2d04ac9f75f39909d681942ffdb77a3adfed3ae879abfa6cfa4cfc0656c9bd53fb903cf959b7231de7cecc26ce9b86be8be8eb91668bcd5933537bffb96d0600b57241ae0bdf94194da0619de6ff08a83651d2bde45a327229a7b3ec5246f2e794cafd8b434f2a623bb506237651763d27571ec094837c261650756b247e7e481cab25914f5e916295a4f9a9fe17c671050158d39fbf241d178d5f83ec35194d532d8152"
+        },
+        "versions": [
+          "TLSv1",
+          "-SSLv2",
+          "-SSLv3",
+          "TLSv1.1",
+          "TLSv1.2",
+          "-TLSv1.3"
+        ],
+        "acceptable_cas": [],
+        "tlsext": [],
+        "ja3s": "174e7e4992a63f6d419626d97363adb8",
+        "cert": {
+          "sig_alg": "sha384WithRSAEncryption",
+          "issued": "20210701000000Z",
+          "expires": "20220701235959Z",
+          "expired": false,
+          "version": 2,
+          "extensions": [
+            {
+              "data": "0\\x16\\x80\\x14o\\x1d5I\\x10l2\\xfaY\\xa0\\x9e\\xbc\\x8a\\xe8\\x1f\\x95\\xbeqz\\x0c",
+              "name": "authorityKeyIdentifier"
+            },
+            {
+              "data": "\\x04\\x14\\x93\\xb0\\x0b<\\x85a\\xb0\\xc8\\xa5\\x81+z,\\x15k\\x91IR\\xd7\\x91",
+              "name": "subjectKeyIdentifier"
+            },
+            {
+              "critical": true,
+              "data": "\\x03\\x02\\x05\\xa0",
+              "name": "keyUsage"
+            },
+            { "critical": true, "data": "0\\x00", "name": "basicConstraints" },
+            {
+              "data": "0\\x14\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x03\\x01\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x03\\x02",
+              "name": "extendedKeyUsage"
+            },
+            {
+              "data": "0@04\\x06\\x0b+\\x06\\x01\\x04\\x01\\xb21\\x01\\x02\\x02O0%0#\\x06\\x08+\\x06\\x01\\x05\\x05\\x07\\x02\\x01\\x16\\x17https://sectigo.com/CPS0\\x08\\x06\\x06g\\x81\\x0c\\x01\\x02\\x02",
+              "name": "certificatePolicies"
+            },
+            {
+              "data": "0604\\xa02\\xa00\\x86.http://GEANT.crl.sectigo.com/GEANTOVRSACA4.crl",
+              "name": "crlDistributionPoints"
+            },
+            {
+              "data": "0g0:\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x02\\x86.http://GEANT.crt.sectigo.com/GEANTOVRSACA4.crt0)\\x06\\x08+\\x06\\x01\\x05\\x05\\x070\\x01\\x86\\x1dhttp://GEANT.ocsp.sectigo.com",
+              "name": "authorityInfoAccess"
+            },
+            {
+              "data": "0\\x18\\x82\\x0b*.uminho.pt\\x82\\tuminho.pt",
+              "name": "subjectAltName"
+            },
+            {
+              "data": "\\x04\\x82\\x01i\\x01g\\x00u\\x00F\\xa5U\\xebu\\xfa\\x91 0\\xb5\\xa2\\x89i\\xf4\\xf3}\\x11,At\\xbe\\xfdI\\xb8\\x85\\xab\\xf2\\xfcp\\xfemG\\x00\\x00\\x01za\\xd7U(\\x00\\x00\\x04\\x03\\x00F0D\\x02 \\x05u\\x89\\xa5\\x19O\\x7f!Jv\\xe4\\xa7\\x9c\\x81\\xbb\\xd1\\xfc\\x1f0\\xb9\\xebN\\xa7\\x16V\"q\\xe2\\x87t\\x167\\x02 X\\xa4Z\\xa9\\xbf\\xd4N:\\xcf\\x9ev=a\\x18m7Zp\\x1565\\x08\\xefd\\xae\\xe7\\x82%\\xde\\xfa\\x106\\x00u\\x00A\\xc8\\xca\\xb1\\xdf\"FJ\\x10\\xc6\\xa1:\\tB\\x87^N1\\x8b\\x1b\\x03\\xeb\\xebK\\xc7h\\xf0\\x90b\\x96\\x06\\xf6\\x00\\x00\\x01za\\xd7T\\xf4\\x00\\x00\\x04\\x03\\x00F0D\\x02 a\\x80\\xd6\\xcb^y\\xc7#dZw\\xebt\\x00w\\x04\\xf2Oe\\xc2\\xf4\\x84\\xec\\xc3\\xd0\\xfc\\xf0\\xbf\\xbbM\\n\\x19\\x02 \\x1a\\xb4=)\\xd2\\xca\\xbb\\xc0\\x97\\x8f\\x90\\x07\\xc0\\x1au\\t\\xcc\\\\\\x93\\xd1\\xea\\xf60O\\xec\\xf6\\xd0\\x1e\\x16 \\x18o\\x00w\\x00)y\\xbe\\xf0\\x9e99!\\xf0Vs\\x9fc\\xa5w\\xe5\\xbeW}\\x9c`\\n\\xf8\\xf9M]&\\\\%]\\xc7\\x84\\x00\\x00\\x01za\\xd7T\\xba\\x00\\x00\\x04\\x03\\x00H0F\\x02!\\x00\\xbc\\x9b\\xcf\\xe9\\xa5L\\xec\\xf8#\\x8b\\xfb\\xb4@\\x03`\\xf7\\xb0\\x93\\xa5{s~7-\\x15\\x99eKF\\xa9\\xe3\\xd4\\x02!\\x00\\xa6\\xabb93\\xc5\\xe8\\x12\\x8d(\\x9a\\xb6\\x18cV\\xbb_\\xa1\\x16\\xaa\\xf9\\xf1\\xa2B\\xb8\\x85cHb7\\xb6\\xcd",
+              "name": "ct_precert_scts"
+            }
+          ],
+          "fingerprint": {
+            "sha256": "578b42546de0527ba75c7f0f4ebde43203a7678dbda527c18faad8da7da42029",
+            "sha1": "c1dd8c59fdbb885ab8495c965ad8170109bb83da"
+          },
+          "serial": 1.761977973500642e38,
+          "subject": {
+            "CN": "*.uminho.pt",
+            "C": "PT",
+            "L": "Braga",
+            "O": "Universidade do Minho",
+            "ST": "Braga"
+          },
+          "pubkey": { "type": "rsa", "bits": 4096 },
+          "issuer": {
+            "C": "NL",
+            "CN": "GEANT OV RSA CA 4",
+            "O": "GEANT Vereniging"
+          }
+        },
+        "cipher": {
+          "version": "TLSv1/SSLv3",
+          "bits": 128,
+          "name": "ECDHE-RSA-AES128-GCM-SHA256"
+        },
+        "trust": {
+          "revoked": false,
+          "browser": { "mozilla": true, "apple": true, "microsoft": true }
+        },
+        "handshake_states": [
+          "before/connect initialization",
+          "SSLv2/v3 write client hello",
+          "SSLv2/v3 read server hello",
+          "SSLv3/TLS read server hello",
+          "SSLv3/TLS read server certificate",
+          "SSLv3/TLS read server key exchange",
+          "SSLv3/TLS read server done",
+          "SSLv3/TLS write client key exchange",
+          "SSLv3/TLS write change cipher spec",
+          "SSLv3/TLS write finished",
+          "SSLv3/TLS flush data",
+          "SSLv3/TLS read finished",
+          "SSL negotiation finished successfully"
+        ],
+        "alpn": [],
+        "ocsp": {}
+      },
+      "hostnames": ["www.uminho.pt"],
+      "transport": "tcp",
+      "ip": 3246983538,
+      "domains": ["uminho.pt"],
+      "ip_str": "193.137.9.114",
+      "os": null,
+      "_shodan": {
+        "crawler": "39b14a9546da27e415ae26323671171ec817f753",
+        "id": "abaddd9b-91e7-40ad-9101-c484142da6c6",
+        "module": "https",
+        "options": {}
+      },
+      "opts": {
+        "vulns": [],
+        "heartbleed": "2021/12/20 08:03:05 193.137.9.114:443 - ERROR: write tcp 193.137.9.114:443: broken pipe\n"
+      },
+      "location": {
+        "city": "Braga",
+        "region_code": "03",
+        "area_code": null,
+        "longitude": -8.42005,
+        "latitude": 41.55032,
+        "postal_code": null,
+        "country_code": "PT",
+        "country_name": "Portugal"
+      }
+    },
+    {
+      "hash": 866658129,
+      "product": "BigIP",
+      "http": {
+        "status": 302,
+        "robots_hash": null,
+        "redirects": [],
+        "securitytxt": null,
+        "title": null,
+        "sitemap_hash": null,
+        "robots": null,
+        "server": "BigIP",
+        "host": "193.137.9.114",
+        "html": "",
+        "location": "/",
+        "html_hash": 0,
+        "sitemap": null,
+        "securitytxt_hash": null
+      },
+      "ip": 3246983538,
+      "isp": "Fundacao para a Ciencia e a Tecnologia, I.P.",
+      "transport": "tcp",
+      "data": "HTTP/1.0 302 Moved Temporarily\r\nLocation: https://193.137.9.114/\r\nServer: BigIP\r\nConnection: Keep-Alive\r\nContent-Length: 0\r\n\r\n",
+      "asn": "AS1930",
+      "port": 80,
+      "hostnames": ["www.uminho.pt"],
+      "location": {
+        "city": "Braga",
+        "region_code": "03",
+        "area_code": null,
+        "longitude": -8.42005,
+        "latitude": 41.55032,
+        "postal_code": null,
+        "country_code": "PT",
+        "country_name": "Portugal"
+      },
+      "timestamp": "2021-12-19T17:45:25.458485",
+      "domains": ["uminho.pt"],
+      "org": "Universidade do Minho",
+      "os": null,
+      "_shodan": {
+        "crawler": "ee2ca87eda2faa9cbd554af69719b1fed0f4f462",
+        "options": {},
+        "id": "6a71a726-a9fc-4e40-ae45-c963ba3630e3",
+        "module": "http",
+        "ptr": true
+      },
+      "opts": {},
+      "ip_str": "193.137.9.114"
+    }
+  ],
+  "asn": "AS1930",
+  "city": "Braga",
+  "latitude": 41.55032,
+  "isp": "Fundacao para a Ciencia e a Tecnologia, I.P.",
+  "longitude": -8.42005,
+  "last_update": "2021-12-20T08:02:13.924444",
+  "country_name": "Portugal",
+  "ip_str": "193.137.9.114",
+  "os": null,
+  "ports": [80, 443]
+}

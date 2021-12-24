@@ -26,26 +26,22 @@ function isSubDomain(url) {
 
 async function reverseLookup(ip) {
     var domains = await dnsPromises.reverse(ip);
-    console.log(domains);
     return domains[0];
 }
 
-function domainInfo(link){
-    let url = new URL(link);
+function domainInfo(link) {
+    const url = new URL(link);
     const result =  {
         hostname: url.hostname,
         pathname: url.pathname,
         protocol: url.protocol.replace(':',''),
         query_parameters: url.search
     }
-
-    console.log(result);
     return result;
 }
 
 async function resolveIpFromDomain(domain){
     const result = await dnsPromises.resolve(domain);
-    console.log(result);
     return result;
 }
 
