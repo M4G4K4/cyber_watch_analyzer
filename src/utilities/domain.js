@@ -3,8 +3,7 @@ const dns = require('dns');
 dnsPromises = dns.promises;
 
 function isSubDomain(url) {
-    url = url.replace(new RegExp(/^\s+/),""); // START
-    url = url.replace(new RegExp(/\s+$/),""); // END
+    url = url.replace(new RegExp(/^\s+/),"");
 
     url = url.replace(new RegExp(/\\/g),"/");
 
@@ -25,8 +24,7 @@ function isSubDomain(url) {
 }
 
 async function reverseLookup(ip) {
-    var domains = await dnsPromises.reverse(ip);
-    return domains[0];
+    return await dnsPromises.reverse(ip);
 }
 
 function domainInfo(link) {

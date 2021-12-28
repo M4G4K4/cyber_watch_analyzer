@@ -47,13 +47,13 @@ function constructCommand(ip, useScript, serviceVersion, osVersion, script) {
         if (allowedScript.includes(script)) {
             command += '--script ' + script + ' ';
         } else {
-            // TODO: Test this scenario
             throw Error("Wrong script");
         }
     }
 
     command += '-oX - ';
     command += ip;
+
     return command;
 }
 

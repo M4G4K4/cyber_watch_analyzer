@@ -1,3 +1,17 @@
+function verifyHostIsUp(result){
+    if(result.nmaprun.runstats[0].hosts[0].$.up === "0"){
+        return {
+            scanner: result.nmaprun.$.scanner,
+            command: result.nmaprun.$.args,
+            version: result.nmaprun.$.version,
+            xmlVersion: result.nmaprun.$.xmloutputversion,
+            protocol: result.nmaprun.scaninfo[0].$.protocol,
+            status: "down"
+        }
+    }else{
+        return null
+    }
+}
 
 function mapNmapResult(scanResult, useScript, serviceVersion, osVersion, script) {
     let data;
@@ -27,6 +41,12 @@ function mapNmapResult(scanResult, useScript, serviceVersion, osVersion, script)
 
 
 function mapPorts(result) {
+
+    const hostDown = verifyHostIsUp(result);
+    if(hostDown.status === 'down'){
+        return hostDown;
+    }
+
     let mapped = {};
 
     let scanInfo = {
@@ -73,6 +93,12 @@ function mapPorts(result) {
 }
 
 function mapPortsWithServiceVersion(result) {
+
+    const hostDown = verifyHostIsUp(result);
+    if(hostDown.status === 'down'){
+        return hostDown;
+    }
+
     let mapped = {};
 
     let scanInfo = {
@@ -124,6 +150,12 @@ function mapPortsWithServiceVersion(result) {
 }
 
 function mapSslEnumCiphers(result) {
+
+    const hostDown = verifyHostIsUp(result);
+    if(hostDown.status === 'down'){
+        return hostDown;
+    }
+
     let mapped = {};
 
     let scanInfo = {
@@ -183,10 +215,19 @@ function mapSslEnumCiphers(result) {
         ports.open.push(data);
     }
 
+    mapped.scanInfo = scanInfo;
+    mapped.host = host;
+    mapped.ports = ports;
+
     return mapped;
 }
 
 function mapVulnerability(result) {
+    const hostDown = verifyHostIsUp(result);
+    if(hostDown != null){
+       return hostDown
+    }
+    
     let mapped = {};
 
     let scanInfo = {
@@ -195,13 +236,14 @@ function mapVulnerability(result) {
         version: result.nmaprun.$.version,
         xmlVersion: result.nmaprun.$.xmloutputversion,
         protocol: result.nmaprun.scaninfo[0].$.protocol,
-        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success'
+        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success',
+        status: "up"
     }
 
     let host = {
         status: result.nmaprun.host[0].status[0].$.state,
         address: result.nmaprun.host[0].address[0].$.addr,
-        addressType: result.nmaprun.host[0].address[0].$.addrType,
+        addressType: result.nmaprun.host[0].address[0].$.addrtype
     };
 
     let ports = {
@@ -214,6 +256,7 @@ function mapVulnerability(result) {
     }
 
     let array = result.nmaprun.host[0].ports[0].port
+
     for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
@@ -224,26 +267,25 @@ function mapVulnerability(result) {
 
         if (array[i].script != undefined) {
             let arrayScript = array[i].script;
+            
             for (let x = 0; x < arrayScript.length; x++) {
-                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined) {
-                    const table = arrayScript[x].table;
-
+                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined && arrayScript[x].table[0].$.key != undefined) {
+                    let table = arrayScript[x].table;
+                    
                     const vulnData = {
                         name: arrayScript[x].$.id,
                         key: table[0].$.key,
                         data: []
                     }
 
-                    for (let c = 0; c < table.elem.length; c++) {
-                        vulnData.data.push(table.elem[c]._)
+                    for (let c = 0; c < table[0].elem.length; c++) {
+                        vulnData.data.push(table[0].elem[c]._)
                     }
 
                     data.vulnerability.push(vulnData);
                 }
             }
-
         }
-
         ports.open.push(data);
     }
 
@@ -255,6 +297,12 @@ function mapVulnerability(result) {
 }
 
 function mapVulnerabilityWithServiceVersion(result) {
+
+    const hostDown = verifyHostIsUp(result);
+    if(hostDown != null){
+       return hostDown
+    }
+
     let mapped = {};
 
     let scanInfo = {
@@ -263,13 +311,14 @@ function mapVulnerabilityWithServiceVersion(result) {
         version: result.nmaprun.$.version,
         xmlVersion: result.nmaprun.$.xmloutputversion,
         protocol: result.nmaprun.scaninfo[0].$.protocol,
-        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success'
+        success: result.nmaprun.runstats[0].finished[0].$.exit === 'success',
+        status: "up"
     }
 
     let host = {
         status: result.nmaprun.host[0].status[0].$.state,
         address: result.nmaprun.host[0].address[0].$.addr,
-        addressType: result.nmaprun.host[0].address[0].$.addrType,
+        addressType: result.nmaprun.host[0].address[0].$.addrtype
     };
 
     let ports = {
@@ -281,7 +330,8 @@ function mapVulnerabilityWithServiceVersion(result) {
         open: []
     }
 
-    let array = result.nmaprun.host[0].ports[0].port
+    let array = result.nmaprun.host[0].ports[0].port;
+
     for (let i = 0; i < array.length; i++) {
         const data = {
             portNumber: array[i].$.portid,
@@ -299,25 +349,23 @@ function mapVulnerabilityWithServiceVersion(result) {
         if (array[i].script != undefined) {
             let arrayScript = array[i].script;
             for (let x = 0; x < arrayScript.length; x++) {
-                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined) {
-                    const table = arrayScript[x].table;
-
+                if (arrayScript[x].table != undefined && arrayScript[x].table[0].elem != undefined && arrayScript[x].table[0].$ != undefined) {
+                    let table = arrayScript[x].table;
+                    
                     const vulnData = {
                         name: arrayScript[x].$.id,
                         key: table[0].$.key,
                         data: []
                     }
 
-                    for (let c = 0; c < table.elem.length; c++) {
-                        vulnData.data.push(table.elem[c]._)
+                    for (let c = 0; c < table[0].elem.length; c++) {
+                        vulnData.data.push(table[0].elem[c]._)
                     }
 
                     data.vulnerability.push(vulnData);
                 }
             }
-
         }
-
         ports.open.push(data);
     }
 

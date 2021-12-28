@@ -27,7 +27,8 @@ function mapHeaders(headers) {
         deprecated_headers_present: [],
         deprecated_headers_notPresent: [],
         secure_headers_present: [],
-        secure_headers_notPresent: []
+        secure_headers_notPresent: [],
+        headers: headers
     };
 
     for (let i = 0; i < deprecated_headers.length; i++) {

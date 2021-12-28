@@ -1,7 +1,7 @@
 const axios = require('axios');
 const mapper = require('./headersMapper');
 
-async function websiteRequest(url){
+async function getHeaders(url){
     let result;
 
     if(!url.includes('http:') && !url.includes('https:')){
@@ -27,7 +27,6 @@ async function websiteRequest(url){
         console.error('Headers - Bad Request');
     }else if(response.status == 200){
         if(response.headers != undefined){
-            console.log(response.headers)
             result = mapper.mapHeaders(response.headers);
         }
     }
@@ -35,5 +34,5 @@ async function websiteRequest(url){
 }
 
 module.exports={
-    websiteRequest
+    getHeaders
 }
