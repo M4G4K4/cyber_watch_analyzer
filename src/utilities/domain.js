@@ -1,4 +1,5 @@
 const dns = require('dns');
+const whois = require('whois-json');
 
 dnsPromises = dns.promises;
 
@@ -29,25 +30,27 @@ async function reverseLookup(ip) {
 
 function domainInfo(link) {
     const url = new URL(link);
-    const result =  {
+    return {
         hostname: url.hostname,
         pathname: url.pathname,
-        protocol: url.protocol.replace(':',''),
-        query_parameters: url.search
+        protocol: url.protocol.replace(':', ''),
+        query_parameters: url.search,
+        stripped: url.hostname.replace("www.", "")
     }
-    return result;
 }
 
 async function resolveIpFromDomain(domain){
-    const result = await dnsPromises.resolve(domain);
-    return result;
+    return await dnsPromises.resolve(domain);
 }
 
-//TODO: Get age of domain
+async function metadata(domain){
+   return await whois(domainInfo(domain).hostname);
+}
 
 module.exports = {
     domainInfo,
     isSubDomain,
     reverseLookup,
-    resolveIpFromDomain
+    resolveIpFromDomain,
+    metadata
 }
