@@ -43,6 +43,8 @@ async function resolveIpFromDomain(domain){
     return result;
 }
 
+//TODO: Get age of domain
+
 module.exports = {
     domainInfo,
     isSubDomain,

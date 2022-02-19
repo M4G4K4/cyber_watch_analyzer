@@ -1,5 +1,5 @@
 /*
-// Info from Headers get from here : https://owasp.org/www-project-secure-headers/#div-headers
+// Info from Headers get from here : https://owasp.org/www-project-secure-headers
 */
 const deprecated_headers = [
     'x-xss-protection',
