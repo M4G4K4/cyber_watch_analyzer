@@ -24,7 +24,7 @@ function isSubDomain(url) {
     return !!(url.match(new RegExp(/\./g)));
 }
 
-async function reverseLookup(ip) {
+async function domainFromIp(ip) {
     return await dnsPromises.reverse(ip);
 }
 
@@ -39,11 +39,11 @@ function domainInfo(link) {
     }
 }
 
-async function resolveIpFromDomain(domain){
+async function ipFromDomain(domain){
     return await dnsPromises.resolve(domain);
 }
 
-async function metadata(domain){
+async function domainData(domain){
    return await whois(domainInfo(domain).hostname);
 }
 
