@@ -35,22 +35,25 @@ function domainInfo(link) {
         pathname: url.pathname,
         protocol: url.protocol.replace(':', ''),
         query_parameters: url.search,
-        stripped: url.hostname.replace("www.", "")
+        stripped: url.hostname.replace("www.", ""),
+        url: link,
+        hostnameToGetIp: 'www.' + url.hostname.replace('www.', '')
     }
 }
 
 async function ipFromDomain(domain){
-    return await dnsPromises.resolve(domain);
+    return await dnsPromises.resolve(domainInfo(domain).hostnameToGetIp);
 }
 
+//Requires domain like : ipvc.pt / stackoverflow.com
 async function domainData(domain){
-   return await whois(domainInfo(domain).hostname);
+   return await whois(domain);
 }
 
 module.exports = {
     domainInfo,
     isSubDomain,
-    reverseLookup,
-    resolveIpFromDomain,
-    metadata
+    domainFromIp,
+    domainData,
+    ipFromDomain
 }

@@ -1,4 +1,5 @@
 const axios = require('axios');
+const mapper = require('./headersMapper');
 
 async function getHeaders(url){
     let result;
