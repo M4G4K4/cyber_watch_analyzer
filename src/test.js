@@ -19,17 +19,7 @@ const ip2 = '192.168.1.94';
 
 (async() => {
 
-    //const cenas = await score.retrieveData(ip2);
-    //console.log(JSON.stringify(cenas));
-
-    //const cenas = await domain.domainFromIp(ip);
-    //console.log(cenas);
-
-    //const cenas = await headers.getHeaders(ip);
-    //console.log(cenas);
-
-    const cenas = await nmap.scanVulnerabilitiiesWithServiceVersion(ip2);
-    console.log(JSON.stringify(cenas));
-
-
+    const cenas = await score.calculateScore(url2);
+    console.log(cenas);
+    
   })()

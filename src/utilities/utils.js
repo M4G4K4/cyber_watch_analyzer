@@ -1,10 +1,8 @@
-//Receives format dd/mm/yyyy
 function getAge(dateString) {
     var date = dateString.substring(0,10)
 
     var finalDate;
 
-    // 2003-12-26
     if(date.includes('-')){
         var year = date.substring(0,4);
         var month = date.substring(6,7);

@@ -3,6 +3,8 @@ const utils = require('./utilities/utils');
 const nmap = require('./nmap/nmap');
 const headers = require('./headers/headers');
 
+//TODO: Make in way that the score can be calculated with each category indepdent from each other
+    // for example only calculate de score based on ssl, headers and the age of domain
 
 const scoreDecrease = {
     domain: {
@@ -78,17 +80,20 @@ async function calculateScore(url){
         score = score - scoreDecrease.each_secure_not_present;
     }
 
+
     for(var i = 0; i < data.scan_ssl.ports.open.length; i++){
         if( data.scan_ssl.ports.open[i].script != undefined){
-            for(var j = 0; j < data.scan_ssl.ports.open[i].script.ciphers.length; j++){
-                if(data.scan_ssl.ports.open.script.ciphers[j].version === 'TLSv1.0'){
-                    score = score - scoreDecrease.scan_ssl.version_1_0;
-                }else if(data.scan_ssl.ports.open.script.ciphers[j].version === 'TLSv1.1'){
-                    score = score - scoreDecrease.scan_ssl.version_1_1;
-                }else if(data.scan_ssl.ports.open.script.ciphers[j].version === 'TLSv1.2'){
-                    score = score - scoreDecrease.scan_ssl.version_1_2;
-                }else if(data.scan_ssl.ports.open.script.ciphers[j].version === 'TLSv1.3'){
-                    score = score - scoreDecrease.scan_ssl.version_1_3;
+            if(data.scan_ssl.ports.open[i].script.ciphers != undefined){
+                for(var j = 0; j < data.scan_ssl.ports.open[i].script.ciphers.length; j++){
+                    if(data.scan_ssl.ports.open[i].script.ciphers[j].version === 'TLSv1.0'){
+                        score = score - scoreDecrease.scan_ssl.version_1_0;
+                    }else if(data.scan_ssl.ports.open[i].script.ciphers[j].version === 'TLSv1.1'){
+                        score = score - scoreDecrease.scan_ssl.version_1_1;
+                    }else if(data.scan_ssl.ports.open[i].script.ciphers[j].version === 'TLSv1.2'){
+                        score = score - scoreDecrease.scan_ssl.version_1_2;
+                    }else if(data.scan_ssl.ports.open[i].script.ciphers[j].version === 'TLSv1.3'){
+                        score = score - scoreDecrease.scan_ssl.version_1_3;
+                    }
                 }
             }
         }
@@ -99,9 +104,9 @@ async function calculateScore(url){
         if(data.scan_vulnerabilities.ports.open[i].vulnerability.length >= 1){
             for(var j = 0; data.scan_vulnerabilities.ports.open[i].vulnerability.length; j++){
                 for(var x = 0; data.scan_vulnerabilities.ports.open[i].vulnerability[j].data.length; x++){
-                    if(data.scan_vulnerability.ports.open[i].vulnerability[j].data[x] === 'LIKELY VULNERABLE'){
+                    if(data.scan_vulnerabilities.ports.open[i].vulnerability[j].data[x] === 'LIKELY VULNERABLE'){
                         score = score - scoreDecrease.scan_vulnerability.possible_vulnerability_found;
-                    }else if(data.scan_vulnerability.ports.open[i].vulnerability[j].data[x] === 'VULNERABLE'){
+                    }else if(data.scan_vulnerabilities.ports.open[i].vulnerability[j].data[x] === 'VULNERABLE'){
                         score = score - scoreDecrease.scan_vulnerability.vulnerability_found;
                     }
                 }
