@@ -1,0 +1,382 @@
+{
+    "host": {
+        "status": "up",
+        "address": "62.28.241.49",
+        "addressType": "ipv4"
+    },
+    "scanInfo": {
+        "scanner": "nmap",
+        "command": "nmap -sV --script vuln -oX - www.ipvc.pt",
+        "version": "7.80",
+        "xmlVersion": "1.04",
+        "protocol": "tcp",
+        "success": true,
+        "status": "up"
+    },
+    "ports": {
+        "closed": {
+            "count": "962",
+            "state": "filtered",
+            "reason": "no-responses"
+        },
+        "open": [
+            {
+                "portNumber": "33",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "80",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "http",
+                "product": "Apache httpd",
+                "version": "2.4.41",
+                "extrainfo": "(Ubuntu)",
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "340",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "389",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "443",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "ssl",
+                "product": "Apache httpd",
+                "extrainfo": "SSL-only mode",
+                "hostname": null,
+                "vulnerability": [
+                    {
+                        "name": "http-phpmyadmin-dir-traversal",
+                        "key": "CVE-2005-3299",
+                        "data": [
+                            "phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion",
+                            "LIKELY VULNERABLE",
+                            "2005-10-nil"
+                        ]
+                    }
+                ]
+            },
+            {
+                "portNumber": "783",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "902",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1169",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1216",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1259",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1524",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1641",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1723",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "pptp",
+                "product": "linux",
+                "version": "(Firmware: 1)",
+                "extrainfo": null,
+                "hostname": "local",
+                "vulnerability": []
+            },
+            {
+                "portNumber": "1801",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "2170",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "2190",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "3000",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "3006",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "3517",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "4005",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "4279",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "5033",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "5555",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "5730",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "6002",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "7001",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "7100",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "7921",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "8000",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "9502",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "17877",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "20031",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "27356",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "32777",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "49157",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "49160",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "55555",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            },
+            {
+                "portNumber": "55600",
+                "protocol": "tcp",
+                "state": "open",
+                "service": "tcpwrapped",
+                "extrainfo": null,
+                "hostname": null,
+                "vulnerability": []
+            }
+        ]
+    }
+}
