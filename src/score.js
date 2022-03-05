@@ -1,10 +1,10 @@
+require('dotenv').config();
 const domain = require('./domain/domain');
 const utils = require('./utilities/utils');
 const nmap = require('./nmap/nmap');
 const headers = require('./headers/headers');
 
-//TODO: Make in way that the score can be calculated with each category indepdent from each other
-    // for example only calculate de score based on ssl, headers and the age of domain
+const Website = require('./models/Website');
 
 const scoreDecrease = {
     domain: {
@@ -31,6 +31,9 @@ const scoreDecrease = {
 
 async function retrieveData(url){
     var result;
+
+    console.log("Retriving data");
+
     const data = {};
 
     data.domain = domain.domainInfo(url);
@@ -57,12 +60,18 @@ async function retrieveData(url){
     result = await nmap.scanVulnerabilitiiesWithServiceVersion(data.domain.ip[0]);
     data.scan_vulnerabilities = result;
 
+    console.log('Fisnish retrieving data')
+
     return data;
 }
 
 async function calculateScore(url){
     var score = 100;
+    
     const data = await retrieveData(url);
+
+
+    console.log('Calculating score, start at ' + score);
 
     if(data.age_in_months<= 1){
         score = score - scoreDecrease.domain.age_in_months_under_1_month;
@@ -77,9 +86,8 @@ async function calculateScore(url){
     }
 
     for(var i = 0; i < data.headers.secure_headers_notPresent.length; i++){
-        score = score - scoreDecrease.each_secure_not_present;
+        score = score - scoreDecrease.headers.each_secure_not_present;
     }
-
 
     for(var i = 0; i < data.scan_ssl.ports.open.length; i++){
         if( data.scan_ssl.ports.open[i].script != undefined){
@@ -102,8 +110,8 @@ async function calculateScore(url){
 
     for(var i = 0; i < data.scan_vulnerabilities.ports.open.length; i++){
         if(data.scan_vulnerabilities.ports.open[i].vulnerability.length >= 1){
-            for(var j = 0; data.scan_vulnerabilities.ports.open[i].vulnerability.length; j++){
-                for(var x = 0; data.scan_vulnerabilities.ports.open[i].vulnerability[j].data.length; x++){
+            for(var j = 0; j < data.scan_vulnerabilities.ports.open[i].vulnerability.length; j++){
+                for(var x = 0; x < data.scan_vulnerabilities.ports.open[i].vulnerability[j].data.length; x++){
                     if(data.scan_vulnerabilities.ports.open[i].vulnerability[j].data[x] === 'LIKELY VULNERABLE'){
                         score = score - scoreDecrease.scan_vulnerability.possible_vulnerability_found;
                     }else if(data.scan_vulnerabilities.ports.open[i].vulnerability[j].data[x] === 'VULNERABLE'){
@@ -113,11 +121,33 @@ async function calculateScore(url){
             }
         }
     }
-
-    return score;
+    
+    return {data, score};
 }
 
+async function perfomAnalysis(url){
+    const {data, score} = await calculateScore(url);
+    
+    const createdWebsite = await Website.create({
+        domain: data.domain.hostname,
+        full_domain: url,
+        score: score,
+        data: data
+    });
+
+    console.log(createdWebsite);
+
+    console.log(data);
+    console.log(score);
+}
+
+async function run(){
+    const cenas = await calculateScore('https://www.ipvc.pt/');
+    console.log(cenas);
+}
+
+run();
+
 module.exports ={
-    retrieveData,
-    calculateScore
+    perfomAnalysis
 }
