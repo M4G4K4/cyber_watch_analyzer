@@ -4,6 +4,7 @@ const utils = require('./utilities/utils');
 const nmap = require('./nmap/nmap');
 const headers = require('./headers/headers');
 
+const testData = require('./tests/testData');
 const Website = require('./models/Website');
 
 const scoreDecrease = {
@@ -38,6 +39,8 @@ async function retrieveData(url){
 
     data.domain = domain.domainInfo(url);
 
+    console.log('Domain info');
+
     result = await domain.domainData(data.domain.stripped);
 
     data.domain.creation_date = result.creationDate;
@@ -48,13 +51,18 @@ async function retrieveData(url){
     result = utils.getAge(data.domain.creation_date);
     data.domain.age_in_months = result;
 
+    console.log('Domain age');
 
     result = await headers.getHeaders(data.domain.url)
     data.headers = result;
 
+    console.log('Get headers');
+
 
     result = await nmap.scanSllEnumCiphers(data.domain.ip[0]);
     data.scan_ssl = result;
+
+    console.log('Scan ssl');
 
 
     result = await nmap.scanVulnerabilitiiesWithServiceVersion(data.domain.ip[0]);
@@ -121,32 +129,40 @@ async function calculateScore(url){
             }
         }
     }
+
+  console.log('score: ' + score);
     
     return {data, score};
 }
 
 async function perfomAnalysis(url){
-    const {data, score} = await calculateScore(url);
-    
-    const createdWebsite = await Website.create({
-        domain: data.domain.hostname,
-        full_domain: url,
-        score: score,
-        data: data
+    console.log('Performing analysis');
+
+    const website = await  Website.findOne({
+        where: {
+            full_domain: url
+        }
     });
 
-    console.log(createdWebsite);
+    if(website && website.score == null){
+        const {data, score} = await calculateScore(url);
 
-    console.log(data);
-    console.log(score);
+        await Website.update({ 
+            score: score,
+            data: data,
+            domain: data.domain.hostname
+        }, 
+        {
+            where: {
+                full_domain: url
+            }
+      });
+    }
 }
 
-async function run(){
-    const cenas = await calculateScore('https://www.ipvc.pt/');
-    console.log(cenas);
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-run();
 
 module.exports ={
     perfomAnalysis

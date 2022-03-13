@@ -1,12 +1,15 @@
 require('dotenv').config();
 var amqp = require('amqplib/callback_api');
+
 const score = require('./src/score');
+const queue = process.env.RABBITMQ_CHANNEL || 'analyze_website';
 
-const queue = (process.env.RABBITMQ_CHANNEL === undefined) ? 'analyze_website' : process.env.RABBITMQ_CHANNEL;
+console.log("##  Starting analyzer #####");
 
+const rabbitConnection = process.env.RABBITMQ_CONNECTION || 'amqp://localhost';
 
 async function analyzer(){
-    await amqp.connect('amqp://localhost', async function(error0, connection) {
+    await amqp.connect(rabbitConnection, async function(error0, connection) {
         if (error0) {
             throw error0;
         }
@@ -14,7 +17,6 @@ async function analyzer(){
             if (error1) {
                 throw error1;
             }
-
 
             channel.assertQueue(queue, {
                 durable: false
@@ -35,7 +37,6 @@ async function analyzer(){
             });
         });
     });
-
 }
 
 analyzer();

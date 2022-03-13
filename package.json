@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "start-dev": "pm2 start index.js -f",
+    "stop-all": "pm2 stop all",
+    "start-prod": "pm2 start index.js -f"
   },
   "author": "Pedro Dias",
   "license": "ISC",
