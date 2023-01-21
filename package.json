@@ -14,7 +14,7 @@
   "author": "Pedro Dias",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.8.0",
+    "amqplib": "^0.10.3",
     "axios": "^0.24.0",
     "check-domain": "^1.1.8",
     "dns": "^0.2.2",
