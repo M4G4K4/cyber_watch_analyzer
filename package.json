@@ -29,7 +29,7 @@
     "whatsbehind": "^1.1.12",
     "whois-json": "^2.0.4",
     "whois-light": "^1.1.5",
-    "whoiser": "^1.13.1",
+    "whoiser": "^1.14.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
