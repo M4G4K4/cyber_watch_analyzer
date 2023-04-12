@@ -30,7 +30,7 @@
     "whois-json": "^2.0.4",
     "whois-light": "^1.1.5",
     "whoiser": "^1.13.1",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
